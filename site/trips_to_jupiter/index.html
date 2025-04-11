@@ -439,6 +439,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using custom input parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -560,8 +583,17 @@ INPUT.tstep    = dt;         % --&gt; step size for Time of flight
 </code></pre>
 <p>Things to notice are:</p>
 <ul>
-<li><code>INPUT.idcentral</code> allows to select the system. In this example, <code>INPUT.idcentral = 1</code> means that Solar System is selected. Other options are: 5 for Jupiter system, 6 for Saturn system and 7 for Uranus system. See also <a href="">constants.m</a> for knowing about the IDs of the bodies.</li>
-<li><code>maxrev</code> is the number of revolutions for Lambert arcs. ASTRA computes all the possible permutations of revolutions per leg (both long and short option) up to the maximum desired by the user.</li>
+<li>
+<p><code>INPUT.idcentral</code> allows to select the system. In this example, <code>INPUT.idcentral = 1</code> means that Solar System is selected. Other options are:</p>
+<ul>
+<li>5 for Jupiter system</li>
+<li>6 for Saturn system</li>
+<li>7 for Uranus system. See also <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> for knowing about the IDs of the bodies.</li>
+</ul>
+</li>
+<li>
+<p><code>maxrev</code> is the number of revolutions for Lambert arcs. ASTRA computes all the possible permutations of revolutions per leg (both long and short option) up to the maximum desired by the user.</p>
+</li>
 <li><code>maxRevOuterPlanets</code> will prune options with more than one rev. on legs towards outer planets (i.e., from Jupiter on). This to prevent the mission duration to increase a lot.</li>
 <li><code>res</code> is a list of integers with <code>[ N, M, LEG_ID ]</code>, where <code>N</code> and <code>M</code> are the object and spacecraft revolutions, respectively, and <code>LEG_ID</code> is the number of the leg at which the resonance is. In this case, it is empty as no resonances are included in the transfer. Later, an example will be shown.</li>
 <li><code>INPUT.opt</code> selects the type of optimization. </li>
@@ -622,7 +654,7 @@ res  = paretoFront(row).res;
 </tr>
 </tbody>
 </table>
-<p>The function <a href="./ASTRA/Plot%20and%20save/plotPath.m">plotPath.m</a> also allows to plot the evolutions of spacecraft distance and velocity with respect to central body:</p>
+<p>The function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Plot%20and%20save/plotPath.m" target="_blank">plotPath.m</a> also allows to plot the evolutions of spacecraft distance and velocity with respect to central body:</p>
 <table>
 <thead>
 <tr>

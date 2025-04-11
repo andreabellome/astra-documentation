@@ -456,6 +456,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using custom input parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -568,14 +591,14 @@
 <p>To work with ASTRA (without any external toolkits), one can simply clone the repository in the local machine:</p>
 <pre><code class="language-bash">git clone &quot;https://github.com/andreabellome/astra&quot;
 </code></pre>
-<p>And start using the <a href="./usage.md">tutorials</a>.</p>
+<p>And start using the <a href="../trips_to_jupiter/">tutorials</a>.</p>
 <p>In particular, the project structure should be something like the following:</p>
 <pre><code class="language-pgsql">local-folder/
 ├── ASTRA/
 ├── clearDeleteAdd.m
 └── main_script.m
 </code></pre>
-<p>where the script <code>clearDeleteAdd.m</code> is used to add all the ASTRA functionalities to the working local folder, and it is directly available when downloading the repository from GitHub. The <code>main_script.m</code> is a generic script that uses ASTRA (e.g., one of the <a href="./usage.md">tutorials</a>).</p>
+<p>where the script <code>clearDeleteAdd.m</code> is used to add all the ASTRA functionalities to the working local folder, and it is directly available when downloading the repository from GitHub. The <code>main_script.m</code> is a generic script that uses ASTRA (e.g., one of the <a href="../trips_to_jupiter/">tutorials</a>).</p>
 <h3 id="nasa-mice-toolkit">NASA MICE Toolkit</h3>
 <p>It is suggested to have also the <a href="https://naif.jpl.nasa.gov/naif/toolkit.html" target="_blank">SPICE toolkit</a>. In particular, the MATLAB interface of SPICE is called MICE, and one can download it from <a href="https://naif.jpl.nasa.gov/naif/toolkit_MATLAB.html" target="_blank">here</a>, for different operating systems. This is very useful to integrate high-precision ephemerides of Solar System objects in ASTRA (planets, moons, asteroids, comets...).</p>
 <p>Without going too much in detail on MICE, here the steps are reported for a proper integration in ASTRA:</p>
@@ -634,7 +657,7 @@ End of MK.
             ├── naif0012.tls
             ├── pck00010.tpc
             └── sat375.bsp
-        ├──mice
+        └── mice
 ├── clearDeleteAdd.m
 └── main_script.m
 </code></pre>
