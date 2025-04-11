@@ -25,11 +25,12 @@ The work is under license <a href="https://creativecommons.org/licenses/by-nc/4.
 ## References
 <a id="1">[1]</a> 
 Bellome, A., “Trajectory design of multi-target missions via graph transcription and dynamic programming,” Ph.D. thesis, Cranfield University, 2023.
-https://dspace.lib.cranfield.ac.uk/items/711f45c8-e6e4-4f27-909d-94170df400e3
+<a href="https://dspace.lib.cranfield.ac.uk/items/711f45c8-e6e4-4f27-909d-94170df400e3" target="_blank">https://dspace.lib.cranfield.ac.uk/items/711f45c8-e6e4-4f27-909d-94170df400e3</a>
 
 <a id="2">[2]</a> 
 Bellome, A., et al. "Multiobjective design of gravity-assist trajectories via graph transcription and dynamic programming." Journal of Spacecraft and Rockets 60.5 (2023): 1381-1399.
-https://doi.org/10.2514/1.A35472
+<a href="https://doi.org/10.2514/1.A35472" target="_blank">https://doi.org/10.2514/1.A35472</a>
+
 
 <!-- <a id="3">[3]</a>
 Junkins, John L., and Ehsan Taheri. "Exploration of alternative state vector choices for low-thrust trajectory optimization." Journal of Guidance, Control, and Dynamics 42.1 (2019): 47-64.
