@@ -88,7 +88,7 @@ paretoFront = process_paretoFront_structure( INPUT, processed_OUTPUT );
 
 Specfically, the structure ```paretoFront``` has all the relevant information about the trajectories on the Pareto front that are easily interpretable. In particular, the default objective functions to be minimized and represented in the plots are:
 
-- overall $ \Delta v$ consumption (that is the departing $ v_{\infty,dep} $, sum of defects and arrival $ v_{\infty,arr}$)
+- overall $ \Delta v$ consumption (that is the departing infinity velocity $ v_{\infty,dep} $, sum of defects and arrival infinity velocity $ v_{\infty,arr}$)
 - overall time of flight
 
 Custom objective functions can also be included as shown in [another tutorial]().

@@ -44,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -532,9 +534,9 @@ cspice_furnsh([MICE_path '/data.mk']);
 <li>the one with <strong>NASA ephemerides</strong> has a minimum cost of: <strong>8.95409 km/s</strong>  and <strong>6.45038 years</strong></li>
 </ul>
 <p>which indeed are very close. Thus, if one needs to plan missions to any of the solar system planet, the approximate ephemerides are suggested, as these are quite faster to compute with respect to high-precision ones.</p>
-<p>** BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode. A work-around to this is shown later, but a rearchitect is needed. This will be solved in the next update... **</p>
+<p><strong>BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode when resonances are present in the sequence. A work-around to this is shown later, but a rearchitect is needed. This will be solved in the next update...</strong></p>
 <h2 id="integrating-nasa-ephemerides-for-small-objects">Integrating NASA ephemerides for small objects</h2>
-<p>A very interesting application for integrating NASA ephemerides into ASTRA is when planning missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.</p>
+<p>A very interesting application for integrating NASA ephemerides into ASTRA is when one needs to plan missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.</p>
 
 
 
