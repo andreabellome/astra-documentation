@@ -25,7 +25,7 @@ To work with ASTRA (without any external toolkits), one can simply clone the rep
 git clone "https://github.com/andreabellome/astra"
 ```
 
-And start using the [tutorials](./usage.md).
+And start using the [tutorials](./trips_to_jupiter.md).
 
 In particular, the project structure should be something like the following:
 
@@ -36,7 +36,7 @@ local-folder/
 └── main_script.m
 ```
 
-where the script ```clearDeleteAdd.m``` is used to add all the ASTRA functionalities to the working local folder, and it is directly available when downloading the repository from GitHub. The ```main_script.m``` is a generic script that uses ASTRA (e.g., one of the [tutorials](./usage.md)).
+where the script ```clearDeleteAdd.m``` is used to add all the ASTRA functionalities to the working local folder, and it is directly available when downloading the repository from GitHub. The ```main_script.m``` is a generic script that uses ASTRA (e.g., one of the [tutorials](./trips_to_jupiter.md)).
 
 ### NASA MICE Toolkit
 
@@ -99,7 +99,7 @@ local-folder/
             ├── naif0012.tls
             ├── pck00010.tpc
             └── sat375.bsp
-        ├──mice
+        └── mice
 ├── clearDeleteAdd.m
 └── main_script.m
 ```
