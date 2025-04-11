@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../nasa_ephemerides/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>Api1 - ASTRA</title>
+        <title>Using custom input parameters - ASTRA</title>
       
     
     
@@ -67,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#customising-boundaries" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -99,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Api1
+              Using custom input parameters
             
           </span>
         </div>
@@ -260,18 +267,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -287,7 +296,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -363,6 +372,76 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Using custom input parameters
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using custom input parameters
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customising-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customising boundaries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -388,6 +467,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customising-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customising boundaries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -405,9 +501,18 @@
   
 
 
-  <h1>Api1</h1>
+  <h1>Using custom input parameters</h1>
 
-
+<p>This tutorial shows how to include some custom input parameters to ASTRA optimization. These are the following:</p>
+<ul>
+<li>Custom boundaries for time of flight between planets</li>
+<li>Custom maximum overall mission duration</li>
+<li>Custom boundaries of infinity velocities $ v_{\infty} $ at different bodies encounters</li>
+<li>Custom objective functions for both SODP and MODP</li>
+</ul>
+<h2 id="customising-boundaries">Customising boundaries</h2>
+<p>This section shows how to add custom boundaries to time of flight, overall mission duration, and infinity velocities at objects' encounters.</p>
+<p>This is very easy to do in ASTRA as one needs to select the following optional input to be appended to the <code>INPUT</code> structure:</p>
 
 
 
