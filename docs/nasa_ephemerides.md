@@ -16,7 +16,7 @@ local-folder/
             ├── naif0012.tls
             ├── pck00010.tpc
             └── sat375.bsp
-        ├──mice
+        └── mice
 ├── clearDeleteAdd.m
 └── main_script.m
 ```
@@ -158,3 +158,9 @@ INPUT.customEphemerides = @EphSS_from_mice_workaround;
 Please, note that in this case the ephemerides are loaded with a workaround to prevent the aforementioned bug to appear. Basically, <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Eph_MICE_interface/EphSS_from_mice_workaround.m" target="_blank">EphSS_from_mice_workaround.m</a> loads the approximate positions of the planets (that are proved to work well for planets), thus avoiding the bug, while for the desired object it uses the NASA kernels.
 
 One notices here that a scan of 5 years is set-up for this specific example, and thus one has that ```INPUT.opt=4``` (i.e., every year, multi-objective dynamic programming is used).
+
+## Performing asteroid fly-bys with NASA ephemerides in ASTRA
+
+It has to be said that one can also write sequences of objects that simulate asteroids fly-bys. In this case, ASTRA will consider them as massless points in space (so zero sphere of influence). 
+
+Let's take the following example. 

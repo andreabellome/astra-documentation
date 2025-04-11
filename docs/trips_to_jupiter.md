@@ -51,7 +51,12 @@ INPUT.tstep    = dt;         % --> step size for Time of flight
 
 Things to notice are:
 
-- ```INPUT.idcentral``` allows to select the system. In this example, ```INPUT.idcentral = 1``` means that Solar System is selected. Other options are: 5 for Jupiter system, 6 for Saturn system and 7 for Uranus system. See also [constants.m]() for knowing about the IDs of the bodies.
+- ```INPUT.idcentral``` allows to select the system. In this example, ```INPUT.idcentral = 1``` means that Solar System is selected. Other options are:
+
+    - 5 for Jupiter system
+    - 6 for Saturn system
+    - 7 for Uranus system. See also <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> for knowing about the IDs of the bodies.
+    
 - ```maxrev``` is the number of revolutions for Lambert arcs. ASTRA computes all the possible permutations of revolutions per leg (both long and short option) up to the maximum desired by the user.
 - ```maxRevOuterPlanets``` will prune options with more than one rev. on legs towards outer planets (i.e., from Jupiter on). This to prevent the mission duration to increase a lot.
 - ```res``` is a list of integers with ```[ N, M, LEG_ID ]```, where ```N``` and ```M``` are the object and spacecraft revolutions, respectively, and ```LEG_ID``` is the number of the leg at which the resonance is. In this case, it is empty as no resonances are included in the transfer. Later, an example will be shown.
@@ -119,7 +124,7 @@ The plot of the optimal trajectory in inertial and Earth-Sun synodic frame is th
 | ![fig-eci](./img/figECI_evemej.png) | ![fig-syn](./img/figSYN_evemej.png) |
 |:--------------------------------------------:|:--------------------------------------------:|
 
-The function [plotPath.m](./ASTRA/Plot%20and%20save/plotPath.m) also allows to plot the evolutions of spacecraft distance and velocity with respect to central body:
+The function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Plot%20and%20save/plotPath.m" target="_blank">plotPath.m</a> also allows to plot the evolutions of spacecraft distance and velocity with respect to central body:
 
 | ![fig-rr](./img/figRSC_evemej.png) | ![fig-vv](./img/figVSC_evemej.png) |
 |:--------------------------------------------:|:--------------------------------------------:|
