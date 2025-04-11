@@ -3,6 +3,14 @@ site_name: ASTRA
 repo_url: https://github.com/andreabellome/astra
 repo_name: ASTRA repository
 
+markdown_extensions:
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
+  - js/katex.js # We'll create this next
+
 theme:
   name: material
   palette:
@@ -14,6 +22,7 @@ nav:
   - Tutorials:
       - Trips to Jupiter: trips_to_jupiter.md
       - Low-thrust trajectories: low_thrust_trajectories.md
+      - Using NASA ephemerides: nasa_ephemerides.md
   # - API Reference:
   #     - Overview: api_reference.md
   #     - API 1: api1.md
