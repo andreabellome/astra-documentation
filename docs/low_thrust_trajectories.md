@@ -1,4 +1,12 @@
-This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a time-fixed fuel-optimal optimal control problem. Many references are available, but the main ones that inspired us are [[1]](#1) and [[2]](#2).
+This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a **time-fixed fuel-optimal optimal control problem** on each leg of the MGA trajectory under consideration. Many references are available, but the main ones that inspired us are [[1]](#1) and [[2]](#2).
+
+## Converting ASTRA solution to low-thrust
+
+
+
+## Converting MGA-nDSM solution to low-thrust
+
+
 
 ## References
 

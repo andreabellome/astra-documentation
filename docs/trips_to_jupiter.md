@@ -50,6 +50,7 @@ INPUT.tstep    = dt;         % --> step size for Time of flight
 ```
 
 Things to notice are:
+
 - ```INPUT.idcentral``` allows to select the system. In this example, ```INPUT.idcentral = 1``` means that Solar System is selected. Other options are: 5 for Jupiter system, 6 for Saturn system and 7 for Uranus system. See also [constants.m]() for knowing about the IDs of the bodies.
 - ```maxrev``` is the number of revolutions for Lambert arcs. ASTRA computes all the possible permutations of revolutions per leg (both long and short option) up to the maximum desired by the user.
 - ```maxRevOuterPlanets``` will prune options with more than one rev. on legs towards outer planets (i.e., from Jupiter on). This to prevent the mission duration to increase a lot.
