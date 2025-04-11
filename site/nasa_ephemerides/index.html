@@ -9,23 +9,23 @@
       
       
       
+        <link rel="prev" href="../low_thrust_trajectories/">
       
-        <link rel="next" href="install/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>ASTRA</title>
+        <title>Using NASA ephemerides - ASTRA</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-astra" class="md-skip">
+        <a href="#integrating-nasa-ephemerides-for-solar-system-planets" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="ASTRA" class="md-header__button md-logo" aria-label="ASTRA" data-md-component="logo">
+    <a href=".." title="ASTRA" class="md-header__button md-logo" aria-label="ASTRA" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Using NASA ephemerides
             
           </span>
         </div>
@@ -194,7 +194,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="ASTRA" class="md-nav__button md-logo" aria-label="ASTRA" data-md-component="logo">
+    <a href=".." title="ASTRA" class="md-nav__button md-logo" aria-label="ASTRA" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -221,32 +221,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -257,62 +235,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contributing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -324,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
@@ -343,18 +265,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -370,7 +294,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -384,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="trips_to_jupiter/" class="md-nav__link">
+      <a href="../trips_to_jupiter/" class="md-nav__link">
         
   
   
@@ -407,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="low_thrust_trajectories/" class="md-nav__link">
+      <a href="../low_thrust_trajectories/" class="md-nav__link">
         
   
   
@@ -427,10 +351,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="nasa_ephemerides/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Using NASA ephemerides
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -441,6 +385,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-nasa-ephemerides-for-solar-system-planets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating NASA ephemerides for Solar System planets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-nasa-ephemerides-for-small-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating NASA ephemerides for small objects
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -470,8 +450,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -480,36 +458,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#integrating-nasa-ephemerides-for-solar-system-planets" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Integrating NASA ephemerides for Solar System planets
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
+  <a href="#integrating-nasa-ephemerides-for-small-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Contributing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
+      Integrating NASA ephemerides for small objects
     </span>
   </a>
   
@@ -534,31 +494,47 @@
   
 
 
-<h1 id="welcome-to-astra">Welcome to ASTRA! 🚀</h1>
-<p>ASTRA (Automatic Swing-by TRAjectories) is a MATLAB-based toolbox for optimally building multi-gravity assist (MGA) trajectories. This has been built as a result of Andrea Bellome's Ph.D. thesis <a href="#1">[1]</a>. ASTRA is based on Dynamic Programming (DP) to optimize MGA trajectories, both in single-objective (SODP) and multi-objective (MODP) variant.</p>
-<p>To cite this folder please use the references <a href="#1">[1]</a> and <a href="#2">[2]</a>.</p>
-<h2 id="overview">Overview</h2>
+  <h1>Using NASA ephemerides</h1>
+
+<p>This page shows how to integrate NASA high-precision ephemerides in ASTRA. This is particularly useful when using different planetary systems or when trips to comets or asteroids are sought.</p>
+<h2 id="integrating-nasa-ephemerides-for-solar-system-planets">Integrating NASA ephemerides for Solar System planets</h2>
+<p>Before considering other bodies, let's consider the Solar System planets. As from the <a href="../install/">intallation guide</a>, one should have the following structure in the local directory:</p>
+<pre><code class="language-pgsql">local-folder/
+├── ASTRA
+├── MICE_TOOLBOX/
+    ├── mice/
+        ├── Kernel/
+            ├── de430.bsp
+            ├── gm_de431.tpc
+            ├── mar097.bsp
+            ├── naif0012.tls
+            ├── pck00010.tpc
+            └── sat375.bsp
+        ├──mice
+├── clearDeleteAdd.m
+└── main_script.m
+</code></pre>
+<p>The <code>main_script.m</code> is the one we want to modify (see, for example the tutorial on <a href="../trips_to_jupiter/">trips to Jupiter</a> or <a href="https://github.com/andreabellome/astra/blob/main/astra_with_custom_eph_mice.m" target="_blank">this script</a>).</p>
+<p>After having set-up all the input and the ASTRA environment, one needs to load the NASA ephemerides. This can be done by imposing that:</p>
+<pre><code class="language-matlab">% --&gt; load MICE toolbox
+MICE_path = './MICE_TOOLBOX' ;
+addpath(genpath(MICE_path)); % --&gt; always include this
+cspice_furnsh([MICE_path '/data.mk']);
+</code></pre>
+<p>In this way, one loads the kernels for planetary ephemerides. This is not sufficient. One needs to tell ASTRA which ephemerides it should use. The default ones are encoded in the script <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Solar%20System/EphSS_cartesian.m" target="_blank">EphSS_cartesian.m</a>. To overwrite those, one can simply set:</p>
+<pre><code class="language-matlab">INPUT.customEphemerides = @EphSS_from_mice;
+</code></pre>
+<p>In particular, the function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Eph_MICE_interface/EphSS_from_mice.m" target="_blank">EphSS_from_mice.m</a> allows to automatically use the NASA ephemerides.</p>
+<p>That's it. </p>
+<p>Then one can launch an optimization for the EVEMEJ similar to the tutorial on <a href="../trips_to_jupiter/">trips to Jupiter</a>. Obviously, the two optimizations should provide very similar result:</p>
 <ul>
-<li>🌍 Developed for space trajectory optimization and mission design</li>
-<li>🔬 Written in MATLAB with modular architecture</li>
-<li>🧪 Includes automated tests and examples</li>
+<li>the one with <strong>approximate ephemerides</strong> has a minimum cost of: <strong>8.94774 km/s</strong> and <strong>6.45038 years</strong></li>
+<li>the one with <strong>NASA ephemerides</strong> has a minimum cost of: <strong>8.95409 km/s</strong>  and <strong>6.45038 years</strong></li>
 </ul>
-<p>Use the sidebar to navigate the documentation.</p>
-<h2 id="contributing">Contributing</h2>
-<p>Currently, only invited developers can contribute to the repository.</p>
-<p>For the moment, the only contributor is... <a href="https://www.linkedin.com/in/andreabellome/" target="_blank">Andrea Bellome</a>! Yeee 🐲</p>
-<h2 id="license">License</h2>
-<p>The work is under license <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC-SA 4.0</a>, that is an Attribution Non-Commercial license.</p>
-<h2 id="references">References</h2>
-<p><a id="1">[1]</a> 
-Bellome, A., “Trajectory design of multi-target missions via graph transcription and dynamic programming,” Ph.D. thesis, Cranfield University, 2023.
-<a href="https://dspace.lib.cranfield.ac.uk/items/711f45c8-e6e4-4f27-909d-94170df400e3" target="_blank">https://dspace.lib.cranfield.ac.uk/items/711f45c8-e6e4-4f27-909d-94170df400e3</a></p>
-<p><a id="2">[2]</a> 
-Bellome, A., et al. "Multiobjective design of gravity-assist trajectories via graph transcription and dynamic programming." Journal of Spacecraft and Rockets 60.5 (2023): 1381-1399.
-<a href="https://doi.org/10.2514/1.A35472" target="_blank">https://doi.org/10.2514/1.A35472</a></p>
-<!-- <a id="3">[3]</a>
-Junkins, John L., and Ehsan Taheri. "Exploration of alternative state vector choices for low-thrust trajectory optimization." Journal of Guidance, Control, and Dynamics 42.1 (2019): 47-64.
-https://doi.org/10.2514/1.G003686 -->
+<p>which indeed are very close. Thus, if one needs to plan missions to any of the solar system planet, the approximate ephemerides are suggested, as these are quite faster to compute with respect to high-precision ones.</p>
+<p>** BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode. A work-around to this is shown later, but a rearchitect is needed. This will be solved in the next update... **</p>
+<h2 id="integrating-nasa-ephemerides-for-small-objects">Integrating NASA ephemerides for small objects</h2>
+<p>A very interesting application for integrating NASA ephemerides into ASTRA is when planning missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.</p>
 
 
 
@@ -607,16 +583,16 @@ https://doi.org/10.2514/1.G003686 -->
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../js/katex.js"></script>
       
     
   </body>

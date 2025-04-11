@@ -12,6 +12,8 @@
         <link rel="prev" href="../trips_to_jupiter/">
       
       
+        <link rel="next" href="../nasa_ephemerides/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#references" class="md-skip">
+        <a href="#converting-astra-solution-to-low-thrust" class="md-skip">
           Skip to content
         </a>
       
@@ -377,6 +379,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#converting-astra-solution-to-low-thrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting ASTRA solution to low-thrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converting-mga-ndsm-solution-to-low-thrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting MGA-nDSM solution to low-thrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -389,6 +409,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nasa_ephemerides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using NASA ephemerides
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -426,6 +469,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#converting-astra-solution-to-low-thrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting ASTRA solution to low-thrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converting-mga-ndsm-solution-to-low-thrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting MGA-nDSM solution to low-thrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -455,7 +516,9 @@
 
   <h1>Low-thrust trajectories</h1>
 
-<p>This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a time-fixed fuel-optimal optimal control problem. Many references are available, but the main ones that inspired us are <a href="#1">[1]</a> and <a href="#2">[2]</a>.</p>
+<p>This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a <strong>time-fixed fuel-optimal optimal control problem</strong> on each leg of the MGA trajectory under consideration. Many references are available, but the main ones that inspired us are <a href="#1">[1]</a> and <a href="#2">[2]</a>.</p>
+<h2 id="converting-astra-solution-to-low-thrust">Converting ASTRA solution to low-thrust</h2>
+<h2 id="converting-mga-ndsm-solution-to-low-thrust">Converting MGA-nDSM solution to low-thrust</h2>
 <h2 id="references">References</h2>
 <p><a id="1">[1]</a> 
 Junkins, John L., and Ehsan Taheri. "Exploration of alternative state vector choices for low-thrust trajectory optimization." Journal of Guidance, Control, and Dynamics 42.1 (2019): 47-64.
@@ -515,6 +578,12 @@ Wijayatunga, Minduli C., Roberto Armellin, and Laura Pirovano. "Exploiting scali
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/katex.js"></script>
       
     
   </body>
