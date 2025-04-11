@@ -49,12 +49,8 @@ Then one can launch an optimization for the EVEMEJ similar to the tutorial on [t
 
 which indeed are very close. Thus, if one needs to plan missions to any of the solar system planet, the approximate ephemerides are suggested, as these are quite faster to compute with respect to high-precision ones.
 
-** BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode. A work-around to this is shown later, but a rearchitect is needed. This will be solved in the next update... **
+**BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode when resonances are present in the sequence. A work-around to this is shown later, but a rearchitect is needed. This will be solved in the next update...**
 
 ## Integrating NASA ephemerides for small objects
 
-A very interesting application for integrating NASA ephemerides into ASTRA is when planning missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.
-
-
-
-
+A very interesting application for integrating NASA ephemerides into ASTRA is when one needs to plan missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.
