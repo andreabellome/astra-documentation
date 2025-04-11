@@ -533,10 +533,85 @@ cspice_furnsh([MICE_path '/data.mk']);
 <li>the one with <strong>approximate ephemerides</strong> has a minimum cost of: <strong>8.94774 km/s</strong> and <strong>6.45038 years</strong></li>
 <li>the one with <strong>NASA ephemerides</strong> has a minimum cost of: <strong>8.95409 km/s</strong>  and <strong>6.45038 years</strong></li>
 </ul>
-<p>which indeed are very close. Thus, if one needs to plan missions to any of the solar system planet, the approximate ephemerides are suggested, as these are quite faster to compute with respect to high-precision ones.</p>
-<p><strong>BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode when resonances are present in the sequence. A work-around to this is shown later, but a rearchitect is needed. This will be solved in the next update...</strong></p>
+<p>which indeed are very close. Thus, if one needs to plan missions to any of the Solar System planet, the approximate ephemerides are suggested, as these are quite faster to compute with respect to high-precision ones.</p>
+<p><strong>BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode when resonances are present in the sequence. A workaround to this is shown later, but a rearchitect is needed. This will be solved in the next update...</strong></p>
 <h2 id="integrating-nasa-ephemerides-for-small-objects">Integrating NASA ephemerides for small objects</h2>
 <p>A very interesting application for integrating NASA ephemerides into ASTRA is when one needs to plan missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.</p>
+<p>If one has properly set-up the MICE toolbox as from the <a href="../install/">intallation guide</a>, then the only thing that remains to do is to download the <code>.bsp</code> file containing the ephemerides of the desired object. <a href="https://github.com/andreabellome/astra/blob/main/download_nasa_ephemerides.m" target="_blank">EphSS_from_mice.m</a> shows how to do it and the steps are reported here.</p>
+<p>As always, one needs to add ASTRA and MICE_TOOLBOX to the path:</p>
+<pre><code class="language-matlab">% --&gt; load ASTRA
+clearDeleteAdd; % --&gt; !!! ONLY CALL IT ONCE FOR SPEED
+
+% --&gt; load mice
+MICE_path = './MICE_TOOLBOX';
+addpath(genpath(MICE_path)); % --&gt; always include this
+cspice_furnsh([MICE_path '/data.mk']);
+</code></pre>
+<p>Then, one selects the central body, and the time-span for the ephemerides validity:</p>
+<pre><code class="language-matlab">% --&gt; central ID (Sun in this case)
+idcentral = 1;
+
+% --&gt; lower and upper bounds for ephemerides
+t0 = [ 2030 1 1 12 0 0 ];
+tf = [ 2100 1 1 12 0 0 ];
+</code></pre>
+<p>One now needs the SPKID of the object (in this case a comet is used):</p>
+<pre><code class="language-matlab">% --&gt; SPKID of the object (found at https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/)
+spk_id = 1000508;
+</code></pre>
+<p>SPKID of small bodies can be found at <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/" target="_blank">NASA Small Body Database Lookup</a> page.</p>
+<p>One finally specifies the folder where the file should be downloaded (default path is used here):</p>
+<pre><code class="language-matlab">% --&gt; set the path where to save the ephemerides
+spk_dir = pwd;
+</code></pre>
+<p>and finally one can call the NASA API:</p>
+<pre><code class="language-matlab">% --&gt; run the code (if success=1 then everything is okay)
+success = getSPK(num2str(spk_id), num2str(t0), num2str(tf), spk_dir, 'overwrite', 'on');
+</code></pre>
+<p>If everything is set-up properly, then one should have a file called <code>1000508.bsp</code> in the specified target folder.</p>
+<p>ASTRA is now ready to be run with the newly-generated ephemerides. The set-up is very similar as before. The desired comet has now ID that is <code>1000508</code> and thus the ASTRA set-up will be like:</p>
+<pre><code class="language-matlab">% --&gt; sequence to be optimized
+INPUT.idcentral = 1; % --&gt; central body (Sun in this case)
+
+seq = [ 3 2 3 3 1000508 ]; res = [ 2 1 3 ];
+
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+maxrev                        = 1;                                                          % --&gt; max. number of revolutions (round number)
+chosenRevs                    = differentRuns_v2(seq, maxrev);                              % --&gt; generate successive runs
+[INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);                         % --&gt; process the resonances options
+[INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs, INPUT.idcentral); % --&gt; only zero revs. on outer planets
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+
+%%%%%%%%%% set departing options %%%%%%%%%%
+t0 = date2mjd2000([2030 1 1 12 0 0]); % --&gt; initial date range (MJD2000)
+tf = t0 + 5*365.25;                  % --&gt; final date range (MJD2000)
+dt = 3;                            % --&gt; step size (days)
+INPUT.depOpts = [t0 tf dt];
+%%%%%%%%%% set departing options %%%%%%%%%%
+
+%%%%%%%%%% set options %%%%%%%%%%
+INPUT.opt      = 4;          % --&gt; (1) is for SODP, (2) is for MODP, (3) is for DATES - SODP, (4) is for YEARS - MODP
+INPUT.vInfOpts = [0 5];      % --&gt; min/max departing infinity velocities (km/s)
+INPUT.dsmOpts  = [1 Inf];    % --&gt; max defect DSM, and total DSMs (km/s)
+INPUT.plot     = [1 1];      % --&gt; plot(1) for Pareto front, plot(2) for best traj. DV
+INPUT.parallel = false;       % --&gt; put true for parallel, false otherwise
+INPUT.tstep    = dt;         % --&gt; step size for Time of flight            
+%%%%%%%%%% set options %%%%%%%%%%
+</code></pre>
+<p>Finally, one loads the ephemerides of the comet:</p>
+<pre><code class="language-matlab">% --&gt; load custom ephemerides
+MICE_path = './MICE_TOOLBOX';
+addpath(genpath(MICE_path)); % --&gt; always include this
+cspice_furnsh([MICE_path '/data.mk']);
+
+spk_dir = [];           % --&gt; location of the bsp file with object ephemerides (if empty, then the current directory is used)
+cspice_furnsh([ pwd '\' spk_dir '\' num2str(max(seq)) '.bsp']); % --&gt; load the object ephemerides
+</code></pre>
+<p>As before, the ephemerides as passed to ASTRA as:</p>
+<pre><code class="language-matlab">INPUT.customEphemerides = @EphSS_from_mice_workaround;
+</code></pre>
+<p>Please, note that in this case the ephemerides are loaded with a workaround to prevent the aforementioned bug to appear. Basically, <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Eph_MICE_interface/EphSS_from_mice_workaround.m" target="_blank">EphSS_from_mice_workaround.m</a> loads the approximate positions of the planets (that are proved to work well for planets), thus avoiding the bug, while for the desired object it uses the NASA kernels.</p>
+<p>One notices here that a scan of 5 years is set-up for this specific example, and thus one has that <code>INPUT.opt=4</code> (i.e., every year, multi-objective dynamic programming is used).</p>
 
 
 
