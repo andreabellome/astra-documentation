@@ -1,0 +1,18 @@
+site_name: ASTRA
+
+repo_url: https://github.com/andreabellome/astra
+repo_name: ASTRA repository
+
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: light blue
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - Tutorials:
+      - Trips to Jupiter: trips_to_jupiter.md
+  - API Reference:
+      - Overview: api_reference.md
+      - API 1: api1.md
