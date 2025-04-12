@@ -26,7 +26,7 @@ INPUT.idcentral = 1;
 seq = [ 3 2 3 4 3 5 ]; res = [ ];
 
 %%%%%%%%%% multi-rev. options %%%%%%%%%%
-maxrev                        = 0;                                         % --> max. number of revolutions (round number)
+maxrev                        = 1;                                         % --> max. number of revolutions (round number)
 chosenRevs                    = differentRuns_v2(seq, maxrev);             % --> generate successive runs
 [INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);        % --> process the resonances options
 [INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs); % --> only zero revs. on outer planets
@@ -67,8 +67,6 @@ Things to notice are:
   - ```4``` is for MODP run each launch year. If the user selects a launch window greater or equal than 3 year AND ```INPUT.opt=2```, this option is selected automatically. This allows to reduce the computational burden in terms of RAM.
 
 The options defined above allow for an MGA trajectory search of ```Earth-Venus-Earth-Mars-Earth-Jupiter``` mission in year ```2023``` using MODP (```INPUT.opt=2```).
-
-<!-- There is a specified 2:1 resonance on the ```Earth-Earth``` leg, i.e., ```res = [2 1 3]```. -->
 
 ASTRA main engine can then be run using:
 

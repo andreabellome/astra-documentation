@@ -100,6 +100,7 @@ In this way, ASTRA uses the custom ephemerides function defined by the user.
 Customising objective functions requires a bit of coding. 
 
 By default, ASTRA will optimise the following objective functions:
+
 - overall $ \Delta v $ as the sum of departing infinity velocity $ v_{\infty,dep} $, defects along the transfer, and arrival infinity velocity $ v_{\infty,arr} $
 - overall transfer time
 
