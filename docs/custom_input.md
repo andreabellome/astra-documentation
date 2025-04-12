@@ -90,8 +90,7 @@ The output are:
 Finally, in the main script one simply sets the following before launching the optimization:
 
 ```matlab
-idcentral               = 1;                                        % --> specify the central body
-INPUT.customEphemerides = @( pl,t ) Eph_custom( pl, t, idcentral ); % --> specify the custom ephemerides function
+INPUT.customEphemerides = @( pl,t ) Eph_custom; % --> specify the custom ephemerides function
 ```
 
 In this way, ASTRA uses the custom ephemerides function defined by the user. 
@@ -100,3 +99,8 @@ In this way, ASTRA uses the custom ephemerides function defined by the user.
 
 Customising objective functions requires a bit of coding. 
 
+By default, ASTRA will optimise the following objective functions:
+- overall $ \Delta v $ as the sum of departing infinity velocity $ v_{\infty,dep} $, defects along the transfer, and arrival infinity velocity $ v_{\infty,arr} $
+- overall transfer time
+
+However, one might want to define custom objectives.

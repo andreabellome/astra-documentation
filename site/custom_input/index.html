@@ -619,12 +619,15 @@ end
 <li><code>vv</code>: a <code>3x1</code> vector with object velocity in consistent reference frame, expressed in <strong>km/s</strong></li>
 </ul>
 <p>Finally, in the main script one simply sets the following before launching the optimization:</p>
-<pre><code class="language-matlab">idcentral               = 1;                                        % --&gt; specify the central body
-INPUT.customEphemerides = @( pl,t ) Eph_custom( pl, t, idcentral ); % --&gt; specify the custom ephemerides function
+<pre><code class="language-matlab">INPUT.customEphemerides = @( pl,t ) Eph_custom; % --&gt; specify the custom ephemerides function
 </code></pre>
 <p>In this way, ASTRA uses the custom ephemerides function defined by the user. </p>
 <h2 id="custom-objective-functions">Custom objective functions</h2>
 <p>Customising objective functions requires a bit of coding. </p>
+<p>By default, ASTRA will optimise the following objective functions:
+- overall $ \Delta v $ as the sum of departing infinity velocity $ v_{\infty,dep} $, defects along the transfer, and arrival infinity velocity $ v_{\infty,arr} $
+- overall transfer time</p>
+<p>However, one might want to define custom objectives.</p>
 
 
 
