@@ -543,6 +543,68 @@
 
 <p>This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a <strong>time-fixed fuel-optimal optimal control problem</strong> on each leg of the MGA trajectory under consideration. Many references are available, but the main ones that inspired us are <a href="#1">[1]</a> and <a href="#2">[2]</a>.</p>
 <h2 id="converting-astra-solution-to-low-thrust">Converting ASTRA solution to low-thrust</h2>
+<p>Assume you just launched an ASTRA run as from the tutorial on <a href="../trips_to_jupiter/">trajectories to Jupiter</a>. Now, one can extract the Pareto front as from:</p>
+<pre><code class="language-matlab">% --&gt; process the OUTPUT
+processed_OUTPUT = postProcessOutputASTRA( OUTPUT );
+
+% --&gt; process the output for better user experience
+paretoFront = process_paretoFront_structure( INPUT, processed_OUTPUT );
+</code></pre>
+<p>From the structure <code>paretoFront</code> one selects the preferred solutions based on user-defined objectives (e.g., launch date, departing infinity velocity, arrival infinity velocity,...). Say that you want the first solution:</p>
+<pre><code class="language-matlab">path = paretoFront(1).path;  % --&gt; this encodes the trajectory
+revs = paretoFront(1).revs;  % --&gt; this encodes the revolutions for the Lambert solver
+res  = paretoFront(1).res;   % --&gt; this encodes the resonance (empty if no resonances are present)
+</code></pre>
+<p>Then, one can build the following structure:</p>
+<pre><code class="language-matlab">% --&gt; extract ASTRA solution
+astraSolution.path      = path;             % --&gt; ASTRA solution
+astraSolution.revs      = revs;             % --&gt; revolutions' options from ASTRA solution
+astraSolution.res       = res;              % --&gt; resonances' options from ASTRA solution
+astraSolution.vdep_free = vdep_free;        % --&gt; v-infinity provided by launcher 'for free' [km/s]
+astraSolution.varr_free = varr_free;        % --&gt; arrival infinity velocity 'for free' [km/s]
+</code></pre>
+<p>One notices that:</p>
+<ul>
+<li>
+<p><code>vdep_free</code> is the infinity velocity provided by the launcher, and thus the thrusting system shoud not provide it. When departing from a comet/asteroid, this should be put to 0, to simulate the departing burn (i.e., leaving the comet/asteroid orbit).</p>
+</li>
+<li>
+<p><code>varr_free</code> is the maximum infinity velocity admissible at the arrival. When arriving at a comet/asteroid, this should be put to 0, to simulate the rendezvous.</p>
+</li>
+</ul>
+<p>Then one needs to set-up the thrusting system:</p>
+<pre><code class="language-matlab">% --&gt; define low-thrust parameters
+lowThrustParameters.Tmax        = 0.1;      % --&gt; max. thrust                       [N]
+lowThrustParameters.Isp         = 3000;     % --&gt; specific impulse                  [s]
+lowThrustParameters.m0          = 1800;     % --&gt; initial mass                      [kg]    
+lowThrustParameters.g0          = 9.80665;  % --&gt; Earth acceleration at sea level   [m/s]
+</code></pre>
+<p>And some specific parameters for the solver:</p>
+<pre><code class="language-matlab">% --&gt; further optional parameters for optimal control solution
+lowThrustParameters.gamma       = 0.5;      % --&gt; discount factor for the smoothing parameter (default is 0.5)
+lowThrustParameters.plot        = true;     % --&gt; this plots the thrust evolution over time for different rho (default is false)
+lowThrustParameters.useParallel = true;     % --&gt; if true, uses parallel for fsolve (default is false)
+lowThrustParameters.rhoLim      = 1e-4;     % --&gt; limit on smoothing parameter (default is 1e-5)
+</code></pre>
+<p>The most critical ones are <code>gamma</code> and <code>rhoLim</code> and their impact is discussed in Ref <a href="#1">[1]</a>.</p>
+<p>Finally, one can launch the solver:</p>
+<pre><code class="language-matlab">% --&gt; find low-thrust transfers from ASTRA solution      
+[LT_SOLUTION, struc] = lowThrustFromASTRASolution( astraSolution, lowThrustParameters, INPUT.idcentral, INPUT.customEphemerides );
+</code></pre>
+<p>that attempts to solve <strong>fuel-optimal time-fixed optimal control problem</strong> for each leg of the ASTRA trajectory.</p>
+<p>One can finally plot the resulting trajectories, mass, and thrust evolutions:</p>
+<pre><code class="language-matlab">% --&gt; plot the final output
+close all; clc;
+
+planets = [struc.idD, struc(end).idA];
+t0      = struc(1).tD;
+tend    = struc(end).tA;
+
+[figTRAJ, figMASS, figTHRmag] = wrapPlotLTFull(LT_SOLUTION, LT_SOLUTION(1).LTsol.param);
+
+figure(figTRAJ);
+plotPLTS_tt(planets, t0, tend, INPUT.idcentral, INPUT.customEphemerides, 1, [], [], 0.5, '--');
+</code></pre>
 <h2 id="converting-mga-ndsm-solution-to-low-thrust">Converting MGA-nDSM solution to low-thrust</h2>
 <h2 id="references">References</h2>
 <p><a id="1">[1]</a> 

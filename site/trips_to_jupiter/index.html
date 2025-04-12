@@ -559,7 +559,7 @@ INPUT.idcentral = 1;
 seq = [ 3 2 3 4 3 5 ]; res = [ ];
 
 %%%%%%%%%% multi-rev. options %%%%%%%%%%
-maxrev                        = 0;                                         % --&gt; max. number of revolutions (round number)
+maxrev                        = 1;                                         % --&gt; max. number of revolutions (round number)
 chosenRevs                    = differentRuns_v2(seq, maxrev);             % --&gt; generate successive runs
 [INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);        % --&gt; process the resonances options
 [INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs); % --&gt; only zero revs. on outer planets
@@ -603,8 +603,6 @@ INPUT.tstep    = dt;         % --&gt; step size for Time of flight
 <li><code>4</code> is for MODP run each launch year. If the user selects a launch window greater or equal than 3 year AND <code>INPUT.opt=2</code>, this option is selected automatically. This allows to reduce the computational burden in terms of RAM.</li>
 </ul>
 <p>The options defined above allow for an MGA trajectory search of <code>Earth-Venus-Earth-Mars-Earth-Jupiter</code> mission in year <code>2023</code> using MODP (<code>INPUT.opt=2</code>).</p>
-<!-- There is a specified 2:1 resonance on the ```Earth-Earth``` leg, i.e., ```res = [2 1 3]```. -->
-
 <p>ASTRA main engine can then be run using:</p>
 <pre><code class="language-matlab">%% --&gt; optimize using ASTRA
 
