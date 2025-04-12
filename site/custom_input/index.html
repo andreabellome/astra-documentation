@@ -443,9 +443,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-objective-funcrtions" class="md-nav__link">
+  <a href="#custom-objective-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom objective funcrtions
+      Custom objective functions
     </span>
   </a>
   
@@ -510,9 +510,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-objective-funcrtions" class="md-nav__link">
+  <a href="#custom-objective-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom objective funcrtions
+      Custom objective functions
     </span>
   </a>
   
@@ -550,24 +550,81 @@
 <h2 id="customising-boundaries">Customising boundaries</h2>
 <p>This section shows how to add custom boundaries to time of flight, overall mission duration, and infinity velocities at objects' encounters.</p>
 <p>This is very easy to do in ASTRA as one needs to select the following optional input to be appended to the <code>INPUT</code> structure:</p>
-<pre><code class="language-matlab">seq = [ 3 2 3 3 5 ]; res = [ 2 1 3 ];
+<pre><code class="language-matlab">% --&gt; sequence and resonances
+seq = [ 3 2 3 3 5 ]; res = [ 2 1 3 ];
 
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+maxrev                        = 1;                                                          % --&gt; max. number of revolutions (round number)
+chosenRevs                    = differentRuns_v2(seq, maxrev);                              % --&gt; generate successive runs
+[INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);                         % --&gt; process the resonances options
+[INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs, INPUT.idcentral); % --&gt; only zero revs. on outer planets
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+
+%%%%%%%%%% set departing options %%%%%%%%%%
+t0 = date2mjd2000([2023 1 1 12 0 0]); % --&gt; initial date range (MJD2000)
+tf = t0 + 1*365.25;                   % --&gt; final date range (MJD2000)
+dt = 5;                               % --&gt; step size (days)
+INPUT.depOpts = [t0 tf dt];
+%%%%%%%%%% set departing options %%%%%%%%%%
+
+%%%%%%%%%% set options %%%%%%%%%%
+INPUT.opt      = 1;          % --&gt; (1) is for SODP, (2) is for MODP, (3) is for DATES - SODP, (4) is for YEARS - MODP
+INPUT.vInfOpts = [0 4];      % --&gt; min/max departing infinity velocities (km/s)
+INPUT.dsmOpts  = [1 Inf];    % --&gt; max defect DSM, and total DSMs (km/s)
+INPUT.plot     = [1 1];      % --&gt; plot(1) for Pareto front, plot(2) for best traj. DV
+INPUT.parallel = true;       % --&gt; put true for parallel, false otherwise
+INPUT.tstep    = 3;          % --&gt; step size for Time of flight            
+%%%%%%%%%% set options %%%%%%%%%%
+
+%%%%%%%%%% custom boundaries %%%%%%%%%%
 INPUT.TOF_LIM = [ 100 500; 100 500; 100 500; 500 2000 ]; % --&gt; min./max TOF [days] for each leg
 INPUT.vInfLim = [ 0 5; 0 9; 0 11; 0 11; 0 7 ];           % --&gt; min./max infinity velocity [km/s] for each planet 
+INPUT.tofyMax = 7;                                       % --&gt; max. overall mission duration [years]
+%%%%%%%%%% custom boundaries %%%%%%%%%%
 </code></pre>
+<p>Specifically:</p>
 <ul>
 <li>
 <p>The field <code>INPUT.TOF_LIM</code> specifies the minimum and maximum time of flight for each leg -- a leg is a planet-to-planet transfer. Thus, in the example, one has 5 planets (EVEEJ) and 4 legs (EV, VE, EE, EJ). One notices that a resonance is specified on the 3rd leg. Therefore, setting up the time-of-flight bounds on that leg <strong>it has no effect</strong> (the resonance dictates the time).</p>
 </li>
 <li>
-<p>Similarly, the field <code>INPUT.vInfLim</code> specifies minimum and maximum infinity velocities at planetary encounters. One should specify one for each planet. If the target object is a comet/asteroid, then the bounds on infinity velocity actually correspond to the bounds for a $ \Delta v $ to rendezvous with the object.</p>
+<p>Similarly, the field <code>INPUT.vInfLim</code> specifies minimum and maximum infinity velocities at planetary encounters. One should specify one for each planet. If the target object is a comet/asteroid, then the bounds on infinity velocity actually correspond to the bounds for a $ \Delta v $ to rendezvous with the object. One should notice that infinity velocity bounds at the first planet are not effective as one should <strong>always</strong> specify:</p>
+<p><code>matlab
+INPUT.vInfOpts = [0 5];      % --&gt; min/max departing infinity velocities (km/s)</code></p>
+<p>Obviously, if the first object of the sequence is an asteroid/comet, this is equivalent to a $ \Delta v $ to depart from it.</p>
 </li>
 <li>
-<p>Finally, the field <code>INPUT.tofy</code> allows to set-up the maximum transfer time <strong>in years</strong> of the whole trip.</p>
+<p>Finally, the field <code>INPUT.tofyMax</code> allows to set-up the maximum transfer time <strong>in years</strong> of the whole trip.</p>
 </li>
 </ul>
 <h2 id="custom-ephemerides">Custom ephemerides</h2>
-<h2 id="custom-objective-funcrtions">Custom objective funcrtions</h2>
+<p>Customising ephemerides function requires a bit of coding.</p>
+<p>Essentially, ASTRA works with approximate planetary positions encoded in the script <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Solar%20System/EphSS_cartesian.m" target="_blank">EphSS_cartesian.m</a>. These are proven to be sufficiently close to NASA high-precsion ones (e.g., <a href="https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/" target="_blank">de430.bsp</a>), as shown in <a href="../nasa_ephemerides/">this tutorial</a>.</p>
+<p>If one wants to specify a custom function (say <code>Eph_custom</code>), the template should be:</p>
+<pre><code class="language-matlab">function [ rr, vv ] = Eph_custom( pl, t, idcentral )
+
+% --&gt; here the logic...
+
+end
+</code></pre>
+<p>Where in input is required:</p>
+<ul>
+<li><code>pl</code> is the ID of the body</li>
+<li><code>t</code> is the epoch at which the ephemerides are computed in <strong>MJD2000</strong></li>
+<li><code>idcentral</code> should specify the central body (e.g., <code>idcentral=1</code> if the Sun is the central body)</li>
+</ul>
+<p>The output are:</p>
+<ul>
+<li><code>rr</code>: a <code>3x1</code> vector with object position in consistent reference frame, expressed in <strong>km</strong></li>
+<li><code>vv</code>: a <code>3x1</code> vector with object velocity in consistent reference frame, expressed in <strong>km/s</strong></li>
+</ul>
+<p>Finally, in the main script one simply sets the following before launching the optimization:</p>
+<pre><code class="language-matlab">idcentral               = 1;                                        % --&gt; specify the central body
+INPUT.customEphemerides = @( pl,t ) Eph_custom( pl, t, idcentral ); % --&gt; specify the custom ephemerides function
+</code></pre>
+<p>In this way, ASTRA uses the custom ephemerides function defined by the user. </p>
+<h2 id="custom-objective-functions">Custom objective functions</h2>
+<p>Customising objective functions requires a bit of coding. </p>
 
 
 
