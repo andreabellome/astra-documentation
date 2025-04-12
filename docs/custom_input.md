@@ -6,7 +6,7 @@ This tutorial shows how to include some custom input parameters to ASTRA optimiz
 - Custom ephemerides
 - Custom objective functions for both SODP and MODP
 
-## Customising boundaries
+## Custom boundaries
 
 This section shows how to add custom boundaries to time of flight, overall mission duration, and infinity velocities at objects' encounters.
 
