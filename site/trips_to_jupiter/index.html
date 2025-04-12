@@ -559,7 +559,7 @@ INPUT.idcentral = 1;
 seq = [ 3 2 3 4 3 5 ]; res = [ ];
 
 %%%%%%%%%% multi-rev. options %%%%%%%%%%
-maxrev                        = 1;                                         % --&gt; max. number of revolutions (round number)
+maxrev                        = 0;                                         % --&gt; max. number of revolutions (round number)
 chosenRevs                    = differentRuns_v2(seq, maxrev);             % --&gt; generate successive runs
 [INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);        % --&gt; process the resonances options
 [INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs); % --&gt; only zero revs. on outer planets
@@ -575,7 +575,7 @@ INPUT.depOpts = [t0 tf dt];
 %%%%%%%%%% set options %%%%%%%%%%
 INPUT.opt      = 2;          % --&gt; (1) is for SODP, (2) is for MODP, (3) is for DATES, (4) is for YEARS - MODP
 INPUT.vInfOpts = [3 5];      % --&gt; min/max departing infinity velocities (km/s)
-INPUT.dsmOpts  = [1 Inf];    % --&gt; max defect DSM, and total DSMs (km/s)
+INPUT.dsmOpts  = [2 Inf];    % --&gt; max defect DSM, and total defects DSMs (km/s)
 INPUT.plot     = [0 0];      % --&gt; plot(1) for Pareto front, plot(2) for best traj. DV
 INPUT.parallel = true;       % --&gt; put true for parallel, false otherwise
 INPUT.tstep    = dt;         % --&gt; step size for Time of flight            
