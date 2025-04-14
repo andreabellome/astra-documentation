@@ -41,7 +41,7 @@ Then one needs to set-up the thrusting system:
 
 ```matlab
 % --> define low-thrust parameters
-lowThrustParameters.Tmax        = 0.35;     % --> max. thrust                       [N]
+lowThrustParameters.Tmax        = 0.1;      % --> max. thrust                       [N]
 lowThrustParameters.Isp         = 3000;     % --> specific impulse                  [s]
 lowThrustParameters.m0          = 1800;     % --> initial mass                      [kg]    
 lowThrustParameters.g0          = 9.80665;  % --> Earth acceleration at sea level   [m/s]
@@ -88,9 +88,65 @@ figure(figTRAJ);
 plotPLTS_tt(planets, t0, tend, INPUT.idcentral, INPUT.customEphemerides, 1, [], [], 0.5, '--');
 ```
 
+An example is shown for an EMEE-1000508 (where the SPKID 1000508 corresponds to the comet <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=1000508" target="_blank">320P/McNaught</a>). 
+
+In this case, the following options are used:
+
+```matlab
+vdep_free = 4; % --> km/s
+varr_free = 0; % --> km/s
+```
+
+Firstly, let's take the ASTRA solution (no refinement with DSM) before and after the low-thrust solver. One notices that the largest burns are in the first leg, to compensate the required infinity velocity at the departure (the needed one is ```4.41932``` km/s), and on the last leg, to rendezvous with the asteroid (matching position and velocity).
+
+| ![fig-eci-1](./img/figECI_1000508.png) | ![fig-eci-2](./img/figTRAJ_1000508.png) |
+|:--------------------------------------------:|:--------------------------------------------:|
+
+The corresponding evolution of the thrust profile and the mass is shown in the figures below.
+
+| ![fig-thr-2](./img/figTHRmag_1000508.png) | ![fig-mass-2](./img/figMASS_1000508.png) |
+|:--------------------------------------------:|:--------------------------------------------:|
+
+Final trajectory details:
+
+- overall time of flight: **3120.5 days**
+- final mass: **1470.218 kg**
+
 ## Converting MGA-nDSM solution to low-thrust
 
-**(coming soon...)**
+Now, let's assume that the same solution obtained before is refined with DSM (e.g., using [this tutorial](./deep_space_man.md)).
+
+One needs to post-process the MGA-nDSM solution:
+
+```matlab
+[struc] = postProcessPathASTRA_dsm_lowThrust( dv, output, MAT, vdep_free, varr_free, idcentral, customEphemerides )
+```
+
+Then, simply passing this:
+
+```matlab
+astraSolution.struc = struc;
+```
+
+alongside the other required inputs, will make ASTRA understand that the solution to be converted to low-thrust is the one with DSM (i.e., the one encoded in ```struc```). In other words, ASTRA will only consider ```astraSolution.struc = struc;``` to solve the fuel-optimal problem, and not anymore ```astraSolution.path = path;```, even if it is specified by the user.
+
+Below the corresponding trajectories before (left) and after (right) low-thrust conversion. One notices that the overall time of fight is increased, especially in the last leg, where a DSM of about 147.9 m/s is needed to lower the $ \Delta v $ needed to rendezvous (i.e., from 1.9047 km/s of the defects solution, to 1.2112 km/s with DSMs).
+
+| ![fig-eci-1](./img/figECI_dsm_1000508.png) | ![fig-eci-2](./img/figTRAJ_dsm_1000508.png) |
+|:--------------------------------------------:|:--------------------------------------------:|
+
+
+The corresponding evolution of the thrust profile and the mass is shown in the figures below.
+
+| ![fig-thr-2](./img/figTHRmag_dsm_1000508.png) | ![fig-mass-2](./img/figMASS_dsm_1000508.png) |
+|:--------------------------------------------:|:--------------------------------------------:|
+
+Final trajectory details:
+
+- overall time of flight: **3248.720 days**
+- final mass: **1588.721 kg**
+
+which indeed has higher mass compared to the previous case, at the price of increased transfer time.
 
 ## References
 
