@@ -30,7 +30,7 @@ nav:
   - Installation: install.md
   - Tutorials:
       - Trips to Jupiter: trips_to_jupiter.md
-      - Adding Deep-Space Manoeuvres: deep_space_man.md
+      - Trajectories with Deep-Space Manoeuvres: deep_space_man.md
       - Low-thrust trajectories: low_thrust_trajectories.md
       - Using NASA ephemerides: nasa_ephemerides.md
       - Using custom input parameters: custom_input.md
