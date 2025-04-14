@@ -105,3 +105,5 @@ By default, ASTRA will optimise the following objective functions:
 - overall transfer time
 
 However, one might want to define custom objectives.
+
+**(coming soon...)**
