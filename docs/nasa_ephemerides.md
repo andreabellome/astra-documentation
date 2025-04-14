@@ -164,3 +164,69 @@ One notices here that a scan of 5 years is set-up for this specific example, and
 It has to be said that one can also write sequences of objects that simulate asteroids fly-bys. In this case, ASTRA will consider them as massless points in space (so zero sphere of influence). 
 
 Let's take the following example. 
+
+```matlab
+% --> clear INPUT and define new ones
+try clear INPUT; catch; end; clc;
+
+% --> sequence to be optimized
+INPUT.idcentral = 1; % --> central body (Sun in this case)
+seq = [ 3 2 3 3 20348435 5 ]; res = [ 2 1 3 ];
+
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+maxrev                        = 1;                                                          % --> max. number of revolutions (round number)
+chosenRevs                    = differentRuns_v2(seq, maxrev);                              % --> generate successive runs
+[INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);                         % --> process the resonances options
+[INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs, INPUT.idcentral); % --> only zero revs. on outer planets
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+
+%%%%%%%%%% set departing options %%%%%%%%%%
+t0 = date2mjd2000([2037 1 1 0 0 0]); % --> initial date range (MJD2000)
+tf = t0 + 1*365.25;                  % --> final date range (MJD2000)
+dt = 2.5;                            % --> step size (days)
+INPUT.depOpts = [t0 tf dt];
+%%%%%%%%%% set departing options %%%%%%%%%%
+
+%%%%%%%%%% set options %%%%%%%%%%
+INPUT.opt      = 2;          % --> (1) is for SODP, (2) is for MODP, (3) is for DATES, (4) is for YEARS - MODP
+INPUT.vInfOpts = [0 5];      % --> min/max departing infinity velocities (km/s)
+INPUT.dsmOpts  = [1 Inf];    % --> max defect DSM, and total DSMs (km/s)
+INPUT.plot     = [1 1];      % --> plot(1) for Pareto front, plot(2) for best traj. DV
+INPUT.parallel = true;       % --> put true for parallel, false otherwise
+INPUT.tstep    = dt;         % --> step size for Time of flight            
+%%%%%%%%%% set options %%%%%%%%%%
+
+%%
+
+% --> load custom ephemerides
+MICE_path = './MICE_TOOLBOX';
+addpath(genpath(MICE_path)); % --> always include this
+cspice_furnsh([MICE_path '/data.mk']);
+
+spk_dir = [];           % --> location of the bsp file with object ephemerides
+
+for inds = 1:length(seq)
+    if seq(inds) > 9
+        cspice_furnsh([ pwd '\' spk_dir '\' num2str(seq(inds)) '.bsp']); % --> load the object ephemerides
+    end
+end
+
+INPUT.customEphemerides = @EphSS_from_mice_workaround;
+
+%% --> optimize using ASTRA
+
+% --> launch ASTRA optimization
+OUTPUT = ASTRA_DP(seq, INPUT);
+```
+
+This considers an EVEEJ transfer with a fly-by with asteroid 20348435 (<a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=20348435" target="_blank">348435 (2005 QM35)</a>) on the EJ leg, and a 2:1 resonance on the 3rd leg (i.e., on the EE one), and launching in 2037. The resulting sequence thus looks like the following:
+
+```matlab
+seq = [ 3 2 3 3 20348435 5 ]; res = [ 2 1 3 ];
+```
+
+In this case, ASTRA considers that the asteroids has **null mass (i.e., zero sphere of influence)**, and the fly-by is performed at the arbitrary altitude of **1000 km**. The prerequisite is to have the ```.bsp``` file of the object in the current working directory, as shown in the previous section.
+
+The following plot shows the resulting optimal trajectory. One notices the fly-by with the desired object on the EJ leg.
+
+![fig-pareto-2](./img/figECI_20348435.png)
