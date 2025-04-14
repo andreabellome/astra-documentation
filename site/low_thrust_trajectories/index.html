@@ -574,7 +574,7 @@ astraSolution.varr_free = varr_free;        % --&gt; arrival infinity velocity '
 </ul>
 <p>Then one needs to set-up the thrusting system:</p>
 <pre><code class="language-matlab">% --&gt; define low-thrust parameters
-lowThrustParameters.Tmax        = 0.1;      % --&gt; max. thrust                       [N]
+lowThrustParameters.Tmax        = 0.35;     % --&gt; max. thrust                       [N]
 lowThrustParameters.Isp         = 3000;     % --&gt; specific impulse                  [s]
 lowThrustParameters.m0          = 1800;     % --&gt; initial mass                      [kg]    
 lowThrustParameters.g0          = 9.80665;  % --&gt; Earth acceleration at sea level   [m/s]
@@ -586,7 +586,15 @@ lowThrustParameters.plot        = true;     % --&gt; this plots the thrust evolu
 lowThrustParameters.useParallel = true;     % --&gt; if true, uses parallel for fsolve (default is false)
 lowThrustParameters.rhoLim      = 1e-4;     % --&gt; limit on smoothing parameter (default is 1e-5)
 </code></pre>
-<p>The most critical ones are <code>gamma</code> and <code>rhoLim</code> and their impact is discussed in Ref <a href="#1">[1]</a>.</p>
+<p>The most critical ones are <code>gamma</code> and <code>rhoLim</code> and their impact is discussed in Ref <a href="#1">[1]</a>. Essentially:</p>
+<ul>
+<li>
+<p><code>gamma</code> is the factor that allows progressive transition from smooth to non-smooth optimal control problem. Typical values are in the range <code>0.5</code> to <code>0.9</code>. A higher value might help when short burns are found, at the price of higher computational effort. A small value makes the whole routine faster, but might be too aggressive in some cases. The user should decide on a case-to-case basis (<code>0.75</code> is suggested for most cases).</p>
+</li>
+<li>
+<p><code>rhoLim</code> is the limit on the <strong>smoothness</strong> of the fuel-optimal problem. A small value corresponds to a more optimal thrust profile, at the price of increased computational effort (some numerical issues might even prevent solutions to appear). A high value correspopnds to less accurate solution to the fuel-optimal problem. A trial-and-error approach identified values between <code>1e-3</code> to <code>1e-5</code> to be sufficiently good ones, as a compromise between computational effort and solutions quality. In other words, for values smaller than those, no significant improvement on the final mass is registered for the interplanetary transfers considered in ASTRA.</p>
+</li>
+</ul>
 <p>Finally, one can launch the solver:</p>
 <pre><code class="language-matlab">% --&gt; find low-thrust transfers from ASTRA solution      
 [LT_SOLUTION, struc] = lowThrustFromASTRASolution( astraSolution, lowThrustParameters, INPUT.idcentral, INPUT.customEphemerides );
@@ -606,6 +614,7 @@ figure(figTRAJ);
 plotPLTS_tt(planets, t0, tend, INPUT.idcentral, INPUT.customEphemerides, 1, [], [], 0.5, '--');
 </code></pre>
 <h2 id="converting-mga-ndsm-solution-to-low-thrust">Converting MGA-nDSM solution to low-thrust</h2>
+<p><strong>(coming soon...)</strong></p>
 <h2 id="references">References</h2>
 <p><a id="1">[1]</a> 
 Junkins, John L., and Ehsan Taheri. "Exploration of alternative state vector choices for low-thrust trajectory optimization." Journal of Guidance, Control, and Dynamics 42.1 (2019): 47-64.
@@ -661,7 +670,7 @@ Wijayatunga, Minduli C., Roberto Armellin, and Laura Pirovano. "Exploiting scali
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

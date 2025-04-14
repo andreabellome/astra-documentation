@@ -41,7 +41,7 @@ Then one needs to set-up the thrusting system:
 
 ```matlab
 % --> define low-thrust parameters
-lowThrustParameters.Tmax        = 0.1;      % --> max. thrust                       [N]
+lowThrustParameters.Tmax        = 0.35;     % --> max. thrust                       [N]
 lowThrustParameters.Isp         = 3000;     % --> specific impulse                  [s]
 lowThrustParameters.m0          = 1800;     % --> initial mass                      [kg]    
 lowThrustParameters.g0          = 9.80665;  % --> Earth acceleration at sea level   [m/s]
@@ -57,7 +57,11 @@ lowThrustParameters.useParallel = true;     % --> if true, uses parallel for fso
 lowThrustParameters.rhoLim      = 1e-4;     % --> limit on smoothing parameter (default is 1e-5)
 ```
 
-The most critical ones are ```gamma``` and ```rhoLim``` and their impact is discussed in Ref [[1]](#1).
+The most critical ones are ```gamma``` and ```rhoLim``` and their impact is discussed in Ref [[1]](#1). Essentially:
+
+- ```gamma``` is the factor that allows progressive transition from smooth to non-smooth optimal control problem. Typical values are in the range ```0.5``` to ```0.9```. A higher value might help when short burns are found, at the price of higher computational effort. A small value makes the whole routine faster, but might be too aggressive in some cases. The user should decide on a case-to-case basis (```0.75``` is suggested for most cases).
+
+- ```rhoLim``` is the limit on the **smoothness** of the fuel-optimal problem. A small value corresponds to a more optimal thrust profile, at the price of increased computational effort (some numerical issues might even prevent solutions to appear). A high value correspopnds to less accurate solution to the fuel-optimal problem. A trial-and-error approach identified values between ```1e-3``` to ```1e-5``` to be sufficiently good ones, as a compromise between computational effort and solutions quality. In other words, for values smaller than those, no significant improvement on the final mass is registered for the interplanetary transfers considered in ASTRA.
 
 Finally, one can launch the solver:
 
@@ -86,7 +90,7 @@ plotPLTS_tt(planets, t0, tend, INPUT.idcentral, INPUT.customEphemerides, 1, [], 
 
 ## Converting MGA-nDSM solution to low-thrust
 
-
+**(coming soon...)**
 
 ## References
 
