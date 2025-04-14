@@ -87,10 +87,29 @@ The output are:
 - ```rr```: a ```3x1``` vector with object position in consistent reference frame, expressed in **km**
 - ```vv```: a ```3x1``` vector with object velocity in consistent reference frame, expressed in **km/s**
 
+It is important to notice that custom objects in the Solar System must have IDs that are **greater than 9** (```pl = 9``` corresponds to Pluto). This is because when computing fly-bys, ASTRA reads the function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> to retrieve the fly-by parameters. For asteroids and comets (i.e., for objects with ```pl > 9```), zero gravity is assumed and thus zero sphere of influence.
+
+Thus, a template for including a custom objects (if one does not want to use NASA ephemerides as shown [here](./nasa_ephemerides.md)) can be:
+
+```matlab
+function [ rr, vv ] = Eph_custom( pl, t, idcentral )
+
+if idcentral == 1 && pl <= 9 % --> Sun as main body and max. ID for planets is 9 (Pluto)
+
+    [ rr, vv ] = EpSS_cartesian( pl, t, idcentral );
+
+else
+    % --> here the logic for the custom object...
+
+end
+
+end
+```
+
 Finally, in the main script one simply sets the following before launching the optimization:
 
 ```matlab
-INPUT.customEphemerides = @( pl,t ) Eph_custom; % --> specify the custom ephemerides function
+INPUT.customEphemerides = @Eph_custom; % --> specify the custom ephemerides function
 ```
 
 In this way, ASTRA uses the custom ephemerides function defined by the user. 
