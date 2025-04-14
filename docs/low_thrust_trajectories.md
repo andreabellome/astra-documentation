@@ -80,6 +80,8 @@ Finally, one can launch the solver:
 
 that attempts to solve **fuel-optimal time-fixed optimal control problem** for each leg of the ASTRA trajectory.
 
+It has to be noticed that one requires in input ```INPUT.customEphemerides``` that depends upon the user. See [this tutorial](./custom_input.md). 
+
 One can finally plot the resulting trajectories, mass, and thrust evolutions:
 
 ```matlab

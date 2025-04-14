@@ -630,6 +630,7 @@ lowThrustParameters.rhoLim      = 1e-4;     % --&gt; limit on smoothing paramete
 [LT_SOLUTION, struc] = lowThrustFromASTRASolution( astraSolution, lowThrustParameters, INPUT.idcentral, INPUT.customEphemerides );
 </code></pre>
 <p>that attempts to solve <strong>fuel-optimal time-fixed optimal control problem</strong> for each leg of the ASTRA trajectory.</p>
+<p>It has to be noticed that one requires in input <code>INPUT.customEphemerides</code> that depends upon the user. See <a href="../custom_input/">this tutorial</a>. </p>
 <p>One can finally plot the resulting trajectories, mass, and thrust evolutions:</p>
 <pre><code class="language-matlab">% --&gt; plot the final output
 close all; clc;
