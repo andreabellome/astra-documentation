@@ -641,8 +641,8 @@ end
 <li><code>rr</code>: a <code>3x1</code> vector with object position in consistent reference frame, expressed in <strong>km</strong></li>
 <li><code>vv</code>: a <code>3x1</code> vector with object velocity in consistent reference frame, expressed in <strong>km/s</strong></li>
 </ul>
-<p>It is important to notice that custom objects in the Solar System must have IDs that are <strong>greater than 9</strong> (<code>pl = 9</code> corresponds to Pluto). This is because when computing fly-bys, ASTRA reads the function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> to retrieve the fly-by parameters. For asteroids and comets (i.e., for objects with <code>pl &gt; 9</code>), zero gravity is assumed and thus zero sphere of influence.</p>
-<p>Thus, a template for including a custom objects (if one does not want to use NASA ephemerides as shown <a href="../nasa_ephemerides/">here</a>) can be:</p>
+<p>It is important to notice that custom ephemerides function should in any case override the <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Solar%20System/EphSS_cartesian.m" target="_blank">EphSS_cartesian.m</a> function, or include it. Moreover, custom objects in the Solar System must have IDs that are <strong>greater than 9</strong> (<code>pl = 9</code> corresponds to Pluto). This is because when computing fly-bys, ASTRA reads the function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> to retrieve the fly-by parameters. For asteroids and comets (i.e., for objects with <code>pl &gt; 9</code>), zero gravity is assumed and thus zero sphere of influence.</p>
+<p>Thus, a template for including a custom objects (if one does not want to use NASA ephemerides as shown <a href="../nasa_ephemerides/">here</a>) should look like the following:</p>
 <pre><code class="language-matlab">function [ rr, vv ] = Eph_custom( pl, t, idcentral )
 
 if idcentral == 1 &amp;&amp; pl &lt;= 9 % --&gt; Sun as main body and max. ID for planets is 9 (Pluto)

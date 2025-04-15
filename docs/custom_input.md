@@ -87,9 +87,9 @@ The output are:
 - ```rr```: a ```3x1``` vector with object position in consistent reference frame, expressed in **km**
 - ```vv```: a ```3x1``` vector with object velocity in consistent reference frame, expressed in **km/s**
 
-It is important to notice that custom objects in the Solar System must have IDs that are **greater than 9** (```pl = 9``` corresponds to Pluto). This is because when computing fly-bys, ASTRA reads the function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> to retrieve the fly-by parameters. For asteroids and comets (i.e., for objects with ```pl > 9```), zero gravity is assumed and thus zero sphere of influence.
+It is important to notice that custom ephemerides function should in any case override the <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/Solar%20System/EphSS_cartesian.m" target="_blank">EphSS_cartesian.m</a> function, or include it. Moreover, custom objects in the Solar System must have IDs that are **greater than 9** (```pl = 9``` corresponds to Pluto). This is because when computing fly-bys, ASTRA reads the function <a href="https://github.com/andreabellome/astra/blob/main/ASTRA/Ephemerides%20%26%20constants/constants.m" target="_blank">constants.m</a> to retrieve the fly-by parameters. For asteroids and comets (i.e., for objects with ```pl > 9```), zero gravity is assumed and thus zero sphere of influence.
 
-Thus, a template for including a custom objects (if one does not want to use NASA ephemerides as shown [here](./nasa_ephemerides.md)) can be:
+Thus, a template for including a custom objects (if one does not want to use NASA ephemerides as shown [here](./nasa_ephemerides.md)) should look like the following:
 
 ```matlab
 function [ rr, vv ] = Eph_custom( pl, t, idcentral )
