@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eath-venus-earth-mars-earth-jupiter" class="md-skip">
+        <a href="#earth-venus-earth-mars-earth-jupiter" class="md-skip">
           Skip to content
         </a>
       
@@ -358,18 +358,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#eath-venus-earth-mars-earth-jupiter" class="md-nav__link">
+  <a href="#earth-venus-earth-mars-earth-jupiter" class="md-nav__link">
     <span class="md-ellipsis">
-      Eath-Venus-Earth-Mars-Earth-Jupiter
+      Earth-Venus-Earth-Mars-Earth-Jupiter
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eath-venus-earth-earth-jupiter" class="md-nav__link">
+  <a href="#earth-venus-earth-earth-jupiter" class="md-nav__link">
     <span class="md-ellipsis">
-      Eath-Venus-Earth-Earth-Jupiter
+      Earth-Venus-Earth-Earth-Jupiter
     </span>
   </a>
   
@@ -517,18 +517,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#eath-venus-earth-mars-earth-jupiter" class="md-nav__link">
+  <a href="#earth-venus-earth-mars-earth-jupiter" class="md-nav__link">
     <span class="md-ellipsis">
-      Eath-Venus-Earth-Mars-Earth-Jupiter
+      Earth-Venus-Earth-Mars-Earth-Jupiter
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eath-venus-earth-earth-jupiter" class="md-nav__link">
+  <a href="#earth-venus-earth-earth-jupiter" class="md-nav__link">
     <span class="md-ellipsis">
-      Eath-Venus-Earth-Earth-Jupiter
+      Earth-Venus-Earth-Earth-Jupiter
     </span>
   </a>
   
@@ -565,8 +565,8 @@
   <h1>Trips to Jupiter</h1>
 
 <p>This tutorial allows to run a simple test script with ASTRA for a mission towards Jupiter. Different sequences will be optimized, just to see different options for ASTRA.</p>
-<h2 id="eath-venus-earth-mars-earth-jupiter">Eath-Venus-Earth-Mars-Earth-Jupiter</h2>
-<p>First sequence to analyse is the Eath-Venus-Earth-Mars-Earth-Jupiter (EVEMEJ), that has been considered for <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice" target="_blank">JUICE mission</a>.</p>
+<h2 id="earth-venus-earth-mars-earth-jupiter">Earth-Venus-Earth-Mars-Earth-Jupiter</h2>
+<p>First sequence to analyse is the Earth-Venus-Earth-Mars-Earth-Jupiter (EVEMEJ), that has been considered for <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice" target="_blank">JUICE mission</a>.</p>
 <p>This tutorial is based on <a href="https://github.com/andreabellome/astra/blob/main/st1_astra_main.m" target="_blank">this script</a>. This allows to optimize the sequence either with SODP (single-objective dynamic programming) or with MODP (multi-objective dynamic programming). A breakdown of the minimum input parameter needed is provided here.</p>
 <p>From <a href="https://github.com/andreabellome/astra/blob/main/st1_astra_main.m" target="_blank">this script</a>, one needs to call ASTRA and building the mex functions (namely Lambert solver, defects function, and low-thrust module):</p>
 <pre><code class="language-matlab">clearDeleteAdd;
@@ -805,7 +805,7 @@ paretoFrontref      = process_paretoFront_structure( INPUT, processed_OUTPUTref 
 <li>mimimum cost functions <strong>after</strong> the refinement are: <strong>8.85087 km/s</strong> and <strong>6.46407 years</strong></li>
 </ul>
 <p>so the refinement actually helped at the price of slightly increased transfer time.</p>
-<h2 id="eath-venus-earth-earth-jupiter">Eath-Venus-Earth-Earth-Jupiter</h2>
+<h2 id="earth-venus-earth-earth-jupiter">Earth-Venus-Earth-Earth-Jupiter</h2>
 <p>This second tutorial is very similar to the one above. The main difference is that one uses a resonant transfer in the Earth-Earth leg.</p>
 <p>The only difference with the script above is:</p>
 <pre><code class="language-matlab">seq = [ 3 2 3 3 5 ];   res = [ 2 1 3 ];

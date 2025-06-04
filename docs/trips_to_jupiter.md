@@ -1,9 +1,9 @@
 
 This tutorial allows to run a simple test script with ASTRA for a mission towards Jupiter. Different sequences will be optimized, just to see different options for ASTRA.
 
-## Eath-Venus-Earth-Mars-Earth-Jupiter
+## Earth-Venus-Earth-Mars-Earth-Jupiter
 
-First sequence to analyse is the Eath-Venus-Earth-Mars-Earth-Jupiter (EVEMEJ), that has been considered for <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice" target="_blank">JUICE mission</a>.
+First sequence to analyse is the Earth-Venus-Earth-Mars-Earth-Jupiter (EVEMEJ), that has been considered for <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice" target="_blank">JUICE mission</a>.
 
 This tutorial is based on <a href="https://github.com/andreabellome/astra/blob/main/st1_astra_main.m" target="_blank">this script</a>. This allows to optimize the sequence either with SODP (single-objective dynamic programming) or with MODP (multi-objective dynamic programming). A breakdown of the minimum input parameter needed is provided here.
 
@@ -252,7 +252,7 @@ It is always suggested to run this second step as one might use coarse grids as 
 
 so the refinement actually helped at the price of slightly increased transfer time.
 
-## Eath-Venus-Earth-Earth-Jupiter
+## Earth-Venus-Earth-Earth-Jupiter
 
 This second tutorial is very similar to the one above. The main difference is that one uses a resonant transfer in the Earth-Earth leg.
 
