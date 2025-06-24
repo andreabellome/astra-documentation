@@ -281,10 +281,21 @@ The same input as before are used. The results are reported below. One notices t
 
 This last script is just to show consecutive resonant legs setup in ASTRA. Specifically, 2:1 and 3:1 resonant ratios are used in successive Mars-Mars legs.
 
-Again, the only thing that changes is the following:
+Again, the only things that change are the following:
 
 ```matlab
 seq = [ 3 2 3 4 4 4 5 ];   res = [ 2 1 4 3 1 5 ];
+```
+
+and the maximum number of revolutions (set to 1 in this case):
+
+```matlab
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
+maxrev                        = 1;                                         % --> max. number of revolutions (round number)
+chosenRevs                    = differentRuns_v2(seq, maxrev);             % --> generate successive runs
+[INPUT.chosenRevs, INPUT.res] = processResonances(chosenRevs, res);        % --> process the resonances options
+[INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs); % --> only zero revs. on outer planets
+%%%%%%%%%% multi-rev. options %%%%%%%%%%
 ```
 
 
