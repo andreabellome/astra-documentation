@@ -281,13 +281,13 @@ The same input as before are used. The results are reported below. One notices t
 
 This last script is just to show consecutive resonant legs setup in ASTRA. Specifically, 2:1 and 3:1 resonant ratios are used in successive Mars-Mars legs.
 
-Again, the only things that change are the following:
+Again, the only things that change are:
 
 ```matlab
 seq = [ 3 2 3 4 4 4 5 ];   res = [ 2 1 4 3 1 5 ];
 ```
 
-and the maximum number of revolutions (set to 1 in this case):
+as well as the maximum number of revolutions (set to 1 in this case):
 
 ```matlab
 %%%%%%%%%% multi-rev. options %%%%%%%%%%
@@ -298,6 +298,13 @@ chosenRevs                    = differentRuns_v2(seq, maxrev);             % -->
 %%%%%%%%%% multi-rev. options %%%%%%%%%%
 ```
 
+To speed up the process, one can set the maximum defect equal to 1 km/s instead of 2 km/s, with limited degradation in the Pareto front:
+
+```matlab
+INPUT.dsmOpts  = [1 Inf];    % --> max defect DSM, and total defects DSMs (km/s)
+```
+
+Below the results are shown.
 
 ![fig-pareto-2](./img/figPareto_evemmmj.png)
 

@@ -846,10 +846,10 @@ paretoFrontref      = process_paretoFront_structure( INPUT, processed_OUTPUTref 
 </table>
 <h2 id="earth-venus-earth-mars-mars-mars-jupiter">Earth-Venus-Earth-Mars-Mars-Mars-Jupiter</h2>
 <p>This last script is just to show consecutive resonant legs setup in ASTRA. Specifically, 2:1 and 3:1 resonant ratios are used in successive Mars-Mars legs.</p>
-<p>Again, the only things that change are the following:</p>
+<p>Again, the only things that change are:</p>
 <pre><code class="language-matlab">seq = [ 3 2 3 4 4 4 5 ];   res = [ 2 1 4 3 1 5 ];
 </code></pre>
-<p>and the maximum number of revolutions (set to 1 in this case):</p>
+<p>as well as the maximum number of revolutions (set to 1 in this case):</p>
 <pre><code class="language-matlab">%%%%%%%%%% multi-rev. options %%%%%%%%%%
 maxrev                        = 1;                                         % --&gt; max. number of revolutions (round number)
 chosenRevs                    = differentRuns_v2(seq, maxrev);             % --&gt; generate successive runs
@@ -857,6 +857,10 @@ chosenRevs                    = differentRuns_v2(seq, maxrev);             % --&
 [INPUT.chosenRevs]            = maxRevOuterPlanets(seq, INPUT.chosenRevs); % --&gt; only zero revs. on outer planets
 %%%%%%%%%% multi-rev. options %%%%%%%%%%
 </code></pre>
+<p>To speed up the process, one can set the maximum defect equal to 1 km/s instead of 2 km/s, with limited degradation in the Pareto front:</p>
+<pre><code class="language-matlab">INPUT.dsmOpts  = [1 Inf];    % --&gt; max defect DSM, and total defects DSMs (km/s)
+</code></pre>
+<p>Below the results are shown.</p>
 <p><img alt="fig-pareto-2" src="../img/figPareto_evemmmj.png" /></p>
 <table>
 <thead>
