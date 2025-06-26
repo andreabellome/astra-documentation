@@ -1,4 +1,8 @@
-This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a **fuel-optimal time-fixed optimal control problem** on each leg of the MGA trajectory under consideration, although with the current functions available in ASTRA, also the **time-fixed energy-optimal control problem** is solvable. Many references are available, but the main ones that inspired us are [[1]](#1) and [[2]](#2). Other OCPs (e.g., fuel-optimal time-fixed with variable thrust) are currently not available in ASTRA. 
+This tutorial shows how to convert trajectories coming from ASTRA into low-thrust. It has to be said that ASTRA is currently able to convert solutions by solving a **fuel-optimal time-fixed optimal control problem** on each leg of the MGA trajectory under consideration, although with the current functions available in ASTRA, also the **time-fixed energy-optimal control problem** is solvable.
+
+Many references are available, but the main ones that inspired us are [[1]](#1) and [[2]](#2).
+
+Other OCPs (e.g., fuel-optimal time-fixed with variable thrust) are currently not available in ASTRA. 
 
 <!-- It is important to recall that currently ASTRA supports the solution to the following optimal control problems (OCPs):
 
