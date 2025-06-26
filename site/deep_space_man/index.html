@@ -746,7 +746,7 @@ ksperc      = 90/100;  % --&gt; percentage plus/minus the reference flyby plane 
 <li><code>ksperc</code>: Percentage variation allowed in the inclination of the flyby plane.</li>
 </ul>
 <p>Then, one specifies if a DSM is needed on the first leg. If <em>yes</em>, then the maximum and minimum infinity velocity should be specified, otherwise those values are ignored</p>
-<pre><code class="language-matlab">optFirstMan = 1;       % --&gt; flag to check if the first leg has a manoeuvre (0 is okay for most of the cases)
+<pre><code class="language-matlab">optFirstMan = 0;       % --&gt; flag to check if the first leg has a manoeuvre (0 is okay for most of the cases)
 vinfMin     = 0;       % --&gt; minimum v-infinity at departure [km/s] -- only works for optFirstMan = 1;
 vinfMax     = 4.0;     % --&gt; maximum v-infinity at departure [km/s] -- only works for optFirstMan = 1;
 </code></pre>

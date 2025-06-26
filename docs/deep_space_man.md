@@ -99,7 +99,7 @@ The variables are the following:
 Then, one specifies if a DSM is needed on the first leg. If *yes*, then the maximum and minimum infinity velocity should be specified, otherwise those values are ignored
 
 ```matlab
-optFirstMan = 1;       % --> flag to check if the first leg has a manoeuvre (0 is okay for most of the cases)
+optFirstMan = 0;       % --> flag to check if the first leg has a manoeuvre (0 is okay for most of the cases)
 vinfMin     = 0;       % --> minimum v-infinity at departure [km/s] -- only works for optFirstMan = 1;
 vinfMax     = 4.0;     % --> maximum v-infinity at departure [km/s] -- only works for optFirstMan = 1;
 ```
