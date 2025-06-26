@@ -8,7 +8,7 @@ To cite this folder please use the references [[1]](#1) and [[2]](#2).
 
 - 🌍 Developed for space trajectory optimization and mission design
 - 🔬 Written in MATLAB with modular architecture
-- 🧪 Includes automated tests and examples
+- 🧪 Includes tests and examples
 
 Use the sidebar to navigate the documentation.
 
