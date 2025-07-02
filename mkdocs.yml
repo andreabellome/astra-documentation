@@ -31,7 +31,8 @@ nav:
   - Tutorials:
       - Trips to Jupiter: trips_to_jupiter.md
       - Trajectories with Deep-Space Manoeuvres: deep_space_man.md
-      - Low-thrust trajectories: low_thrust_trajectories.md
+      - Low-thrust trajectories: lt_traj.md
+      - Converting ASTRA trajectories to low-thrust: low_thrust_trajectories.md
       - Using NASA ephemerides: nasa_ephemerides.md
       - Using custom input parameters: custom_input.md
   # - API Reference:
