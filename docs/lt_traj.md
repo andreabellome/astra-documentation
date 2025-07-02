@@ -1,4 +1,4 @@
-This tutorial shows how to solve **fuel-optimal time-fixed optimal control problem** on each leg of the MGA trajectory under consideration. With the current functions available in ASTRA, also the **time-fixed energy-optimal control problem** is solvable, but not direct function is available via user-friendly API.
+This tutorial shows how to solve **fuel-optimal time-fixed optimal control problem**. With the current functions available in ASTRA, also the **time-fixed energy-optimal control problem** is solvable, but not direct function is available via user-friendly API.
 
 *It has to be said that to solve the fuel-optimal time-fixed optimal control problem ASTRA uses the solution from the time-fixed energy-optimal control problem as initial guess*.
 
