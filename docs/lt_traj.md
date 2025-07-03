@@ -6,7 +6,7 @@ Two representative test cases are shown:
 
 - An Earth-Mars transfer, realtively easy to solve as less than 1 revolution is needed to perform the transfer. Plus, the planets have very similar inclinations.
 
-- A transfer from Earth to Dionysus asteroid, where multiple revolutions are needed and the inclination change substantially (approx. 13 degrees).
+- A transfer from Earth to Dionysus asteroid, where multiple revolutions are needed and the inclination changes substantially (approx. 13 degrees).
 
 One can find the reference script for these tutorials at [this link](https://github.com/andreabellome/astra/blob/main/low_thrust_trajectories.m).
 
@@ -26,7 +26,7 @@ Isp         = 2000;       % --> specific impulse                  [s]
 m0          = 1000;       % --> initial mass                      [kg]           
 g0          = 9.80665;    % --> Earth acceleration at sea level   [m/s]
 useParallel = false;      % --> if true, uses parallel for fsolve
-```matlab
+```
 
 Then one specifies the time of flight (in seconds), initial and final states (in km and km/s, for position and velocity, respectively), as well as the desired number of revolutions:
 
@@ -83,7 +83,16 @@ figure(figTRAJ);
 plotPLTS_tt([3 4], 0, 3*365.25, idcentral, @EphSS_cartesian, 1);
 ```
 
-**INCLUDE IMAGES HERE**
+Specifically, the trajectory, the mass evolution and the thrust profile are shown.
+
+This specific transfer has a final mass of 603.715 kg (all the info about the solution are within the variable ```LTsol```).
+
+![fig-pareto-2](./img/lt_traj/traj_lt_earth_mars.png)
+
+
+| ![fig-eci-2](./img/lt_traj/mass_lt_earth_mars.png) | ![fig-syn-2](./img/lt_traj/thrust_lt_earth_mars.png) |
+|:--------------------------------------------:|:--------------------------------------------:|
+
 
 ## Earth-Dionysus
 
@@ -150,7 +159,15 @@ view( [-19 13] );
 plotPLTS_tt(3, 0, 2*365.25, idcentral, @EphSS_cartesian, 1); % --> add Earth orbit to the plot
 ```
 
-**INCLUDE IMAGES HERE**
+Specifically, the trajectory, the mass evolution and the thrust profile are shown.
+
+This specific transfer has a final mass of 2719.995 kg (all the info about the solution are within the variable ```LTsol```).
+
+![fig-pareto-2](./img/lt_traj/traj_dionysus.png)
+
+
+| ![fig-eci-2](./img/lt_traj/earth_dionysus_mass.png) | ![fig-syn-2](./img/lt_traj/earth_dionysus_thrust.png) |
+|:--------------------------------------------:|:--------------------------------------------:|
 
 
 
