@@ -5794,21 +5794,24 @@
 
 <h1 id="car2kep"><code>car2kep</code></h1>
 <h2 id="input">INPUT:</h2>
-<p>in[6]       State vector in cartesian coordinates (position [L],
-velocity [L/T]).
-mu          Planetary gravity constant [L^3/(M*T^2)].</p>
+<ul>
+<li>in[6] :       State vector in cartesian coordinates (position [L],
+velocity [L/T]).</li>
+<li>mu :           Planetary gravity constant [L^3/(M*T^2)].</li>
+</ul>
 <h2 id="output">OUTPUT:</h2>
-<p>kep[1,6]    Vector of Keplerian elements: kep = [a, e, i, Om, om, th],
+<ul>
+<li>kep[1,6] :    Vector of Keplerian elements: kep = [a, e, i, Om, om, th],
 where theta is the true anomaly. a in [L],
 0 &lt;= i  &lt;= pi   [rad]
 0 &lt;= Om &lt;  2<em>pi [rad]
 0 &lt;= om &lt;  2</em>pi [rad]
-0 &lt;= th &lt;  2<em>pi [rad].
-p           Parameter [L].
-E           Eccentric anomaly, hyperbolic anomaly or parabolic anomaly
-(for definitions see Vallado pag. 49).
-M           Mean anomaly [rad].
-dt          Time from the pericentre passage [T].
+0 &lt;= th &lt;  2*pi [rad].</li>
+<li>p :            Parameter [L].</li>
+<li>E :           Eccentric anomaly, hyperbolic anomaly or parabolic anomaly
+(for definitions see Vallado pag. 49).</li>
+<li>M :           Mean anomaly [rad].</li>
+<li>dt :          Time from the pericentre passage [T].
 Threshold on eccentricity for considering the orbit to be circular
 Value determined comparing the relative error on state and position
 between using the circular case and the elliptic case. With this elimit
@@ -5823,13 +5826,14 @@ Line of nodes vector
 warning('spaceToolbox:car2kep:planarOrbit','Planar orbit. Arbitrary choice of Omega = 0.');
 Argument of the ascending node
 Parameter
-Eccentricity vector: ev = 1/mu</em>cross(v,h) - r/nr
-ev  = 1/mu<em>[v(2)</em>h(3)-v(3)<em>h(2),v(3)</em>h(1)-v(1)<em>h(3),v(1)</em>h(2)-v(2)*h(1)] - r/nr;
+Eccentricity vector: ev = 1/mu<em>cross(v,h) - r/nr
+ev  = 1/mu</em>[v(2)<em>h(3)-v(3)</em>h(2),v(3)<em>h(1)-v(1)</em>h(3),v(1)<em>h(2)-v(2)</em>h(1)] - r/nr;
 Argument of the pericentre
 % Arbitrary eccentricity vector
 Semi-major axis
 True anomaly: acos(dot(ev,r)/ne/nr);
-% the condition dot(r,cross(h,ev)) &lt; 0 works in the same way</p>
+% the condition dot(r,cross(h,ev)) &lt; 0 works in the same way</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[kep] = car2kep(in,mu)
 </code></pre>
