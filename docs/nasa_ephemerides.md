@@ -55,7 +55,7 @@ which indeed are very close. Thus, if one needs to plan missions to any of the S
 
 A very interesting application for integrating NASA ephemerides into ASTRA is when one needs to plan missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.
 
-If one has properly set-up the MICE toolbox as from the [intallation guide](./install.md), then the only thing that remains to do is to download the ```.bsp``` file containing the ephemerides of the desired object. <a href="https://github.com/andreabellome/astra/blob/main/download_nasa_ephemerides.m" target="_blank">EphSS_from_mice.m</a> shows how to do it and the steps are reported here.
+If one has properly set-up the MICE toolbox as from the [intallation guide](./install.md), then the only thing that remains to do is to download the ```.bsp``` file containing the ephemerides of the desired object. The script <a href="https://github.com/andreabellome/astra/blob/main/download_nasa_ephemerides.m" target="_blank">download_nasa_ephemerides.m</a> shows how to do it and the steps are reported here.
 
 As always, one needs to add ASTRA and MICE_TOOLBOX to the path:
 

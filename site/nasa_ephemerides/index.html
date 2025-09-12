@@ -626,7 +626,7 @@ cspice_furnsh([MICE_path '/data.mk']);
 <p><strong>BUG DETECTED: currently, high-precision NASA ephemerides prevent ASTRA to be run in parallel mode when resonances are present in the sequence. A workaround to this is shown later, but a rearchitect is needed. This will be solved in the next update...</strong></p>
 <h2 id="integrating-nasa-ephemerides-for-small-objects">Integrating NASA ephemerides for small objects</h2>
 <p>A very interesting application for integrating NASA ephemerides into ASTRA is when one needs to plan missions to Solar System objects that are not planets (asteroids and/or comets). This opens a very wide range of possibilities in terms of mission design.</p>
-<p>If one has properly set-up the MICE toolbox as from the <a href="../install/">intallation guide</a>, then the only thing that remains to do is to download the <code>.bsp</code> file containing the ephemerides of the desired object. <a href="https://github.com/andreabellome/astra/blob/main/download_nasa_ephemerides.m" target="_blank">EphSS_from_mice.m</a> shows how to do it and the steps are reported here.</p>
+<p>If one has properly set-up the MICE toolbox as from the <a href="../install/">intallation guide</a>, then the only thing that remains to do is to download the <code>.bsp</code> file containing the ephemerides of the desired object. The script <a href="https://github.com/andreabellome/astra/blob/main/download_nasa_ephemerides.m" target="_blank">download_nasa_ephemerides.m</a> shows how to do it and the steps are reported here.</p>
 <p>As always, one needs to add ASTRA and MICE_TOOLBOX to the path:</p>
 <pre><code class="language-matlab">% --&gt; load ASTRA
 clearDeleteAdd; % --&gt; !!! ONLY CALL IT ONCE FOR SPEED
