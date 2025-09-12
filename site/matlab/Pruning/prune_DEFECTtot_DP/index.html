@@ -5813,17 +5813,18 @@
 <p>This function prunes (removes) trajectory legs based on the total defect value.
 It calculates the total defect for each leg and removes those with a total defect exceeding a specified maximum value.</p>
 <h2 id="inputs">INPUTS:</h2>
-<p>LEGSnext : Matrix of trajectory legs, where each row contains details of the legs, including defect values for each segment.
-VASnext  : Matrix of velocity vectors associated with each trajectory leg.
-VINFnext : Matrix of final velocity norms for each trajectory leg.
-defectTOTMax : Maximum allowed total defect value. Legs with a total defect greater than this value will be removed.</p>
+<ul>
+<li>LEGSnext : Matrix of trajectory legs, where each row contains details of the legs, including defect values for each segment.</li>
+<li>VASnext  : Matrix of velocity vectors associated with each trajectory leg.</li>
+<li>VINFnext : Matrix of final velocity norms for each trajectory leg.</li>
+<li>defectTOTMax : Maximum allowed total defect value. Legs with a total defect greater than this value will be removed.</li>
+</ul>
 <h2 id="outputs">OUTPUTS:</h2>
-<p>LEGSnext : Updated matrix of trajectory legs after pruning.
-VASnext  : Updated matrix of velocity vectors after pruning.
-VINFnext : Updated matrix of final velocity norms after pruning.
-FUNCTION CALLS:
-sum    : Computes the total defect for each trajectory leg by summing over specified columns.
-find   : Finds indices of elements that meet the specified condition (total defect &gt; defectTOTMax).</p>
+<ul>
+<li>LEGSnext : Updated matrix of trajectory legs after pruning.</li>
+<li>VASnext  : Updated matrix of velocity vectors after pruning.</li>
+<li>VINFnext : Updated matrix of final velocity norms after pruning.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LEGSnext, VASnext, VINFnext] = prune_DEFECTtot_DP(LEGSnext, VASnext, VINFnext, defectTOTMax)
 </code></pre>

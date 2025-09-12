@@ -5813,16 +5813,18 @@
 <p>This function prunes (removes) trajectory legs that have defects exceeding a specified maximum value.
 It filters out the legs based on the defect values, along with their associated velocity vectors and final velocity norms.</p>
 <h2 id="inputs">INPUTS:</h2>
-<p>LEGSnext : Matrix of trajectory legs, where each row contains details of the legs, including defect values.
-VASnext  : Matrix of velocity vectors associated with each trajectory leg.
-VINFnext : Matrix of final velocity norms for each trajectory leg.
-defectMax: Maximum allowed defect value. Legs with defects greater than this value will be removed.</p>
+<ul>
+<li>LEGSnext  : Matrix of trajectory legs, where each row contains details of the legs, including defect values.</li>
+<li>VASnext   : Matrix of velocity vectors associated with each trajectory leg.</li>
+<li>VINFnext  : Matrix of final velocity norms for each trajectory leg.</li>
+<li>defectMax : Maximum allowed defect value. Legs with defects greater than this value will be removed.</li>
+</ul>
 <h2 id="outputs">OUTPUTS:</h2>
-<p>LEGSnext : Updated matrix of trajectory legs after pruning.
-VASnext  : Updated matrix of velocity vectors after pruning.
-VINFnext : Updated matrix of final velocity norms after pruning.
-FUNCTION CALLS:
-find   : Finds indices of elements that meet the specified condition (defect value &gt; defectMax).</p>
+<ul>
+<li>LEGSnext : Updated matrix of trajectory legs after pruning.</li>
+<li>VASnext  : Updated matrix of velocity vectors after pruning.</li>
+<li>VINFnext : Updated matrix of final velocity norms after pruning.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LEGSnext, VASnext, VINFnext] = prune_DEFECT_DP(LEGSnext, VASnext, VINFnext, defectMax)
 </code></pre>

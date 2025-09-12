@@ -5813,14 +5813,18 @@
 <p>This function checks for and removes any invalid trajectory legs from the input matrices where the delta-v
 value is <code>NaN</code> (not a number). It cleans up the corresponding entries in the associated velocity matrices as well.</p>
 <h2 id="input">INPUT:</h2>
-<p>LEGSnext : Matrix containing the possible trajectory legs, where each row represents a leg with columns
-for departure and arrival planets, departure and arrival times, and the delta-v required.
-VASnext  : Matrix containing the arrival velocities at the destination planets for each leg.
-VINFnext : Vector containing the incoming velocities at the destination planets for each leg.</p>
+<ul>
+<li>LEGSnext : Matrix containing the possible trajectory legs, where each row represents a leg with columns
+for departure and arrival planets, departure and arrival times, and the delta-v required.</li>
+<li>VASnext  : Matrix containing the arrival velocities at the destination planets for each leg.</li>
+<li>VINFnext : Vector containing the incoming velocities at the destination planets for each leg.</li>
+</ul>
 <h2 id="output">OUTPUT:</h2>
-<p>LEGSnext : Cleaned matrix with invalid trajectory legs (those with <code>NaN</code> delta-v values) removed.
-VASnext  : Cleaned matrix with corresponding rows removed from the arrival velocities.
-VINFnext : Cleaned vector with corresponding entries removed from the incoming velocities.</p>
+<ul>
+<li>LEGSnext : Cleaned matrix with invalid trajectory legs (those with <code>NaN</code> delta-v values) removed.</li>
+<li>VASnext  : Cleaned matrix with corresponding rows removed from the arrival velocities.</li>
+<li>VINFnext : Cleaned vector with corresponding entries removed from the incoming velocities.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LEGSnext, VASnext, VINFnext] = check_ISNAN_DP(LEGSnext, VASnext, VINFnext)
 </code></pre>

@@ -4353,18 +4353,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      OUTPUT
+      OUTPUTS:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output_1" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      OUTPUT:
+      EXAMPLES:
     </span>
   </a>
   
@@ -5781,18 +5781,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      OUTPUT
+      OUTPUTS:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output_1" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      OUTPUT:
+      EXAMPLES:
     </span>
   </a>
   
@@ -5831,35 +5831,20 @@
 <p>This function processes a matrix of revision codes and generates a corresponding matrix of revision options.
 It also optionally appends additional data to the output matrix based on the input <code>res</code>.</p>
 <h2 id="inputs">INPUTS:</h2>
-<p>revVec : Matrix of revision codes. Each element specifies a different revision type.
-res     : (Optional) Matrix of results, where the last column indicates which legs are being referenced.</p>
-<h2 id="output">OUTPUT</h2>
-<p>REVS is structured as follows:
-- Each row corresponds to a revision code and its mapped options.
-- Additional columns are appended if <code>res</code> is provided, based on the legs results.
-EXAMPLES:
-If <code>revVec</code> is [10; 21; 30] and <code>res</code> is [1 2; 3 4; 5 6], the output <code>REVS</code> will include the mapped options and potentially additional columns from <code>res</code>.
-PROCESSING STEPS:
-1. Initialize <code>REVS</code> with zeroes.
-2. Map revision codes to options.
-3. Optionally append additional data from <code>res</code> based on leg results.</p>
-<h2 id="output_1">OUTPUT:</h2>
-<p>REVS    : Matrix of revision options, with each revision code mapped to a specific option set.
+<ul>
+<li>revVec : Matrix of revision codes. Each element specifies a different revision type.</li>
+<li>res     : (Optional) Matrix of results, where the last column indicates which legs are being referenced.</li>
+</ul>
+<h2 id="outputs">OUTPUTS:</h2>
+<ul>
+<li>REVS    : Matrix of revision options, with each revision code mapped to a specific option set.
 Optionally includes data from <code>res</code> if <code>res</code> is provided.
-PROCESS:
-1. Reshape <code>res</code> to have 3 rows and adjust it for processing.
-2. Extract the last column of <code>res</code> which represents legs results.
-3. Initialize a variable to track the column index for revision options.
-4. Loop through each element of <code>revVec</code> to map the revision codes to option sets:
-- 0  -&gt; [0 0]
-- 10 -&gt; [1 0]
-- 11 -&gt; [1 1]
-- 20 -&gt; [2 0]
-- 21 -&gt; [2 1]
-- 30 -&gt; [3 0]
-- 31 -&gt; [3 1]
-5. Append two zero columns to <code>REVS</code> for possible additional data.
-6. If <code>res</code> is provided, append the data from <code>res</code> to the last two columns of <code>REVS</code>.</p>
+REVS is structured as follows:</li>
+<li>Each row corresponds to a revision code and its mapped options.</li>
+<li>Additional columns are appended if <code>res</code> is provided, based on the legs results.</li>
+</ul>
+<h2 id="examples">EXAMPLES:</h2>
+<p>If <code>revVec</code> is [10; 21; 30] and <code>res</code> is [1 2; 3 4; 5 6], the output <code>REVS</code> will include the mapped options and potentially additional columns from <code>res</code>.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[REVS] = generateDiffRuns(revVec, res)
 </code></pre>

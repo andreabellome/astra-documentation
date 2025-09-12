@@ -12,6 +12,8 @@ To cite this folder please use the references [[1]](#1) and [[2]](#2).
 
 Use the sidebar to navigate the documentation.
 
+An interesting feature is the ```MATLAB API```. The user can explore it from the sidebar to explore the different functionalities available in ASTRA. Please, note that such documentation is automatically generated, thus some typos and/or formatting errors might appear. Please be kind! 
+
 ## Contributing
 
 Currently, only invited developers can contribute to the repository.

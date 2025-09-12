@@ -11,7 +11,7 @@ os.makedirs(DOCS_OUT, exist_ok=True)
 function_pattern = re.compile(
     r"^\s*function\s+(?:\[(.*?)\]|(\w+))?\s*=\s*(\w+)\((.*?)\)", re.IGNORECASE
 )
-section_headers = ["DESCRIPTION", "DESCRIPTION:", "INPUT", "INPUT:", "INPUTS:", "INPUTS", "OUTPUTS:", "OUTPUT", "OUTPUT:", "PROCESS", "FUNCTION CALLS", "FUNCTION CALLS:"]
+section_headers = ["DESCRIPTION", "DESCRIPTION:", "INPUT", "INPUT:", "INPUTS:", "INPUTS", "OUTPUTS:", "OUTPUT", "OUTPUT:", "EXAMPLES:", "PROCESS", "FUNCTION CALLS", "FUNCTION CALLS:"]
 
 def parse_matlab_file(filepath):
     """Parse a MATLAB .m file to extract function signature and structured docstring."""

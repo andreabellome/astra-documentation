@@ -38,6 +38,8 @@ local-folder/
 
 where the script ```clearDeleteAdd.m``` is used to add all the ASTRA functionalities to the working local folder, and it is directly available when downloading the repository from GitHub. The ```main_script.m``` is a generic script that uses ASTRA (e.g., one of the [tutorials](./trips_to_jupiter.md)).
 
+The user can navigate the ```MATLAB API``` from the sidebar to explore the different functionalities available in ASTRA. Please, note that such documentation is automatically generated, thus some typos and/or formatting errors might appear. Please be kind! 
+
 ### NASA MICE Toolkit
 
 It is suggested to have also the <a href="https://naif.jpl.nasa.gov/naif/toolkit.html" target="_blank">SPICE toolkit</a>. In particular, the MATLAB interface of SPICE is called MICE, and one can download it from <a href="https://naif.jpl.nasa.gov/naif/toolkit_MATLAB.html" target="_blank">here</a>, for different operating systems. This is very useful to integrate high-precision ephemerides of Solar System objects in ASTRA (planets, moons, asteroids, comets...).
