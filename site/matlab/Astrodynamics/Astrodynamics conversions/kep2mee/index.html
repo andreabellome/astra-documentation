@@ -5820,24 +5820,24 @@ circular orbits.</p>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>kep : vector of Keplerian elements [a, e, i, Omega, omega, theta]
-where:
-a     : semi-major axis [km]
-e     : eccentricity
-i     : inclination [rad]
-Omega : right ascension of ascending node [rad]
-omega : argument of pericenter [rad]
-theta : true anomaly [rad]</li>
+where:</li>
+<li>a     : semi-major axis [km]</li>
+<li>e     : eccentricity</li>
+<li>i     : inclination [rad]</li>
+<li>Omega : right ascension of ascending node [rad]</li>
+<li>omega : argument of pericenter [rad]</li>
+<li>theta : true anomaly [rad]</li>
 </ul>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>mee : vector of Modified Equinoctial Elements [p, f, g, h, k, L]
-where:
-p : semi-latus rectum [km]
-f : e<em>cos(omega + Omega)
-g : e</em>sin(omega + Omega)
-h : tan(i/2)<em>cos(Omega)
-k : tan(i/2)</em>sin(Omega)
-L : true longitude [rad]</li>
+where:</li>
+<li>p : semi-latus rectum [km]</li>
+<li>f : e*cos(omega + Omega)</li>
+<li>g : e*sin(omega + Omega)</li>
+<li>h : tan(i/2)*cos(Omega)</li>
+<li>k : tan(i/2)*sin(Omega)</li>
+<li>L : true longitude [rad]</li>
 </ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[mee] = kep2mee( kep )
