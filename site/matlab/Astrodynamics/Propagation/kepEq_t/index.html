@@ -5815,35 +5815,21 @@
 <p>It finds the time t corresponding to an angular position f. Elliptic
 orbits (e &lt; 1).</p>
 <h2 id="input">INPUT:</h2>
-<p>f[1]    True anomaly [rad].
-a[1]    Semi-major axis [L].
-e[1]    Eccentricity.
-mu[1]   Planetary constant (mu = mass * G) [L^3/T^2].
-f0[1]   Fixed true anomaly [rad].
-t0[1]   Time corresponding to f0 [T].</p>
-<blockquote>
+<ul>
+<li>f[1]    True anomaly [rad].</li>
+<li>a[1]    Semi-major axis [L].</li>
+<li>e[1]    Eccentricity.</li>
+<li>mu[1]   Planetary constant (mu = mass * G) [L^3/T^2].</li>
+<li>f0[1]   Fixed true anomaly [rad].</li>
+<li>t0[1]   Time corresponding to f0 [T].<blockquote>
 <p>Optional: Default value = 0.</p>
 </blockquote>
+</li>
+</ul>
 <h2 id="output">OUTPUT:</h2>
-<p>t[1]    Time corresponding to f [T] between [-Inf, Inf].
-CALLED FUNCTIONS:
-(none)
-FUTURE DEVELOPMENT:
-Extension to parabolic and hyperbolic orbits.
-ORIGINAL VERSION:
-Camilla Colombo, 20/02/2006, MATLAB, tl.m
-AUTHOR:
-Camilla Colombo, Nicolas Croisard, 20/11/2007, MATLAB, kepEq_t.m
-PREVIOUS VERSION:
-Camilla Colombo, 20/11/2007, MATLAB, tl_inf.m
-- Time corresponding to f [T] given in the range [-Inf, Inf].
-Camilla Colombo, Nicolas Croisard, 20/11/2007, MATLAB, tl3.m
-- Header and function name in accordance with guidlines.
-CHANGELOG:
-02/12/2008, Matteo Ceriotti: Optional argument t0.
-02/12/2008, REVISION: Matteo Ceriotti
-30/12/2009, Camilla Colombo: Header and function name in accordance
-with guidlines.</p>
+<ul>
+<li>t[1]    Time corresponding to f [T] between [-Inf, Inf].</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[t] = kepEq_t(f, a, e, mu, f0, t0)
 </code></pre>

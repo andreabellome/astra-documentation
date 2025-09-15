@@ -5813,15 +5813,16 @@
 <p>This function generates a combined ephemeris matrix by generating ephemeris data for two sets of planetary time pairs,
 and then combining and deduplicating the results.</p>
 <h2 id="input">INPUT:</h2>
-<p>M1                : Matrix of unique departure time pairs, where each row contains departure planet ID and initial time.
-M2                : Matrix of unique arrival time pairs, where each row contains arrival planet ID and arrival time.
-idcentral         : ID of the central body. See constants.m
-customEphemerides : user-defined custom ephemerides. See EphSS_cartesian.m for reference</p>
+<ul>
+<li>M1                : Matrix of unique departure time pairs, where each row contains departure planet ID and initial time.</li>
+<li>M2                : Matrix of unique arrival time pairs, where each row contains arrival planet ID and arrival time.</li>
+<li>idcentral         : ID of the central body. See constants.m</li>
+<li>customEphemerides : user-defined custom ephemerides. See EphSS_cartesian.m for reference</li>
+</ul>
 <h2 id="output">OUTPUT:</h2>
-<p>EPH : Combined ephemeris matrix containing unique rows of ephemeris data for both departure and arrival time pairs.
-NOTES:
-- <code>generateEPH</code> is a helper function that produces ephemeris data for given time pairs.
-- The output matrix <code>EPH</code> is unique and ordered based on the rows to ensure no duplicates and maintain stability.</p>
+<ul>
+<li>EPH : Combined ephemeris matrix containing unique rows of ephemeris data for both departure and arrival time pairs.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[EPH] = wrap_generateEPH(M1, M2, idcentral, customEphemerides)
 </code></pre>

@@ -4,7 +4,8 @@
 This is a wrapper for all ASTRA functionalities.
 
 ## INPUT
-seq      : vector with planets IDs in the MGA sequence
+- seq      : vector with planets IDs in the MGA sequence
+- INPUT    : structure with the following mandatory fields:
 - chosenRevs :
 - res        : vector with N:M resonant ratio and number
 of leg at which the resonant transfer is needed. If no
@@ -24,6 +25,9 @@ best DV trajectory, plot(2) is for plotting the Pareto
 front. Please put plot(i)=1 if you want to plot the results.
 - parallel   : if 1, then parallel computing is used
 - tstep      : (days) discretization time step
+
+## OUTPUT
+- OUTPUT : structure with the final trajectories
 
 ## Function Signature
 ```matlab

@@ -15,7 +15,7 @@ In case of hyperbola (e>1), it must be: kep(1)<0.
 - p :          Semi-latus rectum [L]. Only used for parabola case.
 
 ## OUTPUT:
-out[1,6]    State vector in cartesian coordinates (position [L],
+- out[1,6]    State vector in cartesian coordinates (position [L],
 velocity [L/T]).
 
 ## Function Signature

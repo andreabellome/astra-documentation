@@ -5794,18 +5794,22 @@
 
 <h1 id="processdataandwriteparam"><code>processDataAndWriteParam</code></h1>
 <h2 id="input">INPUT:</h2>
-<p>m0          : initial mass                                        [kg]
-tof         : time of flight                                      [s]
-state1      : initial state                                       [km],[km/s]
-state2      : final state                                         [km],[km/s]
-Tmax        : max. thrust                                         [N]
-Isp         : specific impulse                                    [s]
-g0          : Earth acceleration at sea level (default: 9.80665)  [m/s2]
-Nrev        : number of revolutions (default: 0)
-idcentral   : ID of the central body (default: 1, i.e., Sun)
-useParallel : if true, uses parallel for fsolve (default: false)</p>
+<ul>
+<li>m0          : initial mass                                        [kg]</li>
+<li>tof         : time of flight                                      [s]</li>
+<li>state1      : initial state                                       [km],[km/s]</li>
+<li>state2      : final state                                         [km],[km/s]</li>
+<li>Tmax        : max. thrust                                         [N]</li>
+<li>Isp         : specific impulse                                    [s]</li>
+<li>g0          : Earth acceleration at sea level (default: 9.80665)  [m/s2]</li>
+<li>Nrev        : number of revolutions (default: 0)</li>
+<li>idcentral   : ID of the central body (default: 1, i.e., Sun)</li>
+<li>useParallel : if true, uses parallel for fsolve (default: false)</li>
+</ul>
 <h2 id="output">OUTPUT:</h2>
-<p>param : structure with all the info needed for running the solver</p>
+<ul>
+<li>param : structure with all the info needed for running the solver</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[param] = processDataAndWriteParam(m0, tof, state1, state2, Tmax, Isp, g0, Nrev, idcentral, useParallel)
 </code></pre>
