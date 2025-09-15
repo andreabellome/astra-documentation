@@ -2581,6 +2581,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      DESCRIPTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      INPUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#function-signature" class="md-nav__link">
     <span class="md-ellipsis">
       Function Signature
@@ -5729,6 +5756,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      DESCRIPTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      INPUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#function-signature" class="md-nav__link">
     <span class="md-ellipsis">
       Function Signature
@@ -5757,6 +5811,20 @@
 
 
 <h1 id="ephss_from_mice_workaround"><code>EphSS_from_mice_workaround</code></h1>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function is a workaround for getting ephemerides from NASA MICE
+toolbox.</p>
+<h2 id="input">INPUT</h2>
+<ul>
+<li>IDspk       : SPK id of the desired body</li>
+<li>t           : epoch in MJD2000</li>
+<li>idcentral   : ID of the central body (see constants.m)</li>
+</ul>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>rr : Cartesian position vector of the celestial body (3x1 vector).</li>
+<li>vv : Cartesian velocity.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[rr, vv] = EphSS_from_mice_workaround(IDspk, t, idcentral)
 </code></pre>
