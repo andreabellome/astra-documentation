@@ -139,6 +139,7 @@
   - Plot and save:
     - generateOutputSequenceTXT: matlab/Plot and save/generateOutputSequenceTXT.md
     - generateOutputTXT: matlab/Plot and save/generateOutputTXT.md
+    - plotOutputByLauchDate: matlab/Plot and save/plotOutputByLauchDate.md
     - plotPLTS_tt: matlab/Plot and save/plotPLTS_tt.md
     - plotPareto: matlab/Plot and save/plotPareto.md
     - plotPath: matlab/Plot and save/plotPath.md

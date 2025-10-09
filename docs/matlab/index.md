@@ -142,6 +142,7 @@ Browse the automatically generated documentation:
 - Plot and save/
   - [generateOutputSequenceTXT](./Plot and save/generateOutputSequenceTXT.md)
   - [generateOutputTXT](./Plot and save/generateOutputTXT.md)
+  - [plotOutputByLauchDate](./Plot and save/plotOutputByLauchDate.md)
   - [plotPLTS_tt](./Plot and save/plotPLTS_tt.md)
   - [plotPareto](./Plot and save/plotPareto.md)
   - [plotPath](./Plot and save/plotPath.md)
