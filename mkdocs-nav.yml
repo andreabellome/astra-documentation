@@ -8,6 +8,7 @@
       - car2kep: matlab/Astrodynamics/Astrodynamics conversions/car2kep.md
       - car2mee: matlab/Astrodynamics/Astrodynamics conversions/car2mee.md
       - eci2synodic_eph: matlab/Astrodynamics/Astrodynamics conversions/eci2synodic_eph.md
+      - findDeclinationLaunch: matlab/Astrodynamics/Astrodynamics conversions/findDeclinationLaunch.md
       - kep2car: matlab/Astrodynamics/Astrodynamics conversions/kep2car.md
       - kep2mee: matlab/Astrodynamics/Astrodynamics conversions/kep2mee.md
       - kepler2MEOE: matlab/Astrodynamics/Astrodynamics conversions/kepler2MEOE.md
@@ -15,6 +16,7 @@
       - mee2kep: matlab/Astrodynamics/Astrodynamics conversions/mee2kep.md
       - spherical2Car: matlab/Astrodynamics/Astrodynamics conversions/spherical2Car.md
       - theta2M: matlab/Astrodynamics/Astrodynamics conversions/theta2M.md
+      - to_TCN: matlab/Astrodynamics/Astrodynamics conversions/to_TCN.md
       - vinfBplane2car: matlab/Astrodynamics/Astrodynamics conversions/vinfBplane2car.md
       - wrapECI2Synodic_SE: matlab/Astrodynamics/Astrodynamics conversions/wrapECI2Synodic_SE.md
     - Basic Transfers:

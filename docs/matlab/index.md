@@ -11,6 +11,7 @@ Browse the automatically generated documentation:
     - [car2kep](./Astrodynamics/Astrodynamics conversions/car2kep.md)
     - [car2mee](./Astrodynamics/Astrodynamics conversions/car2mee.md)
     - [eci2synodic_eph](./Astrodynamics/Astrodynamics conversions/eci2synodic_eph.md)
+    - [findDeclinationLaunch](./Astrodynamics/Astrodynamics conversions/findDeclinationLaunch.md)
     - [kep2car](./Astrodynamics/Astrodynamics conversions/kep2car.md)
     - [kep2mee](./Astrodynamics/Astrodynamics conversions/kep2mee.md)
     - [kepler2MEOE](./Astrodynamics/Astrodynamics conversions/kepler2MEOE.md)
@@ -18,6 +19,7 @@ Browse the automatically generated documentation:
     - [mee2kep](./Astrodynamics/Astrodynamics conversions/mee2kep.md)
     - [spherical2Car](./Astrodynamics/Astrodynamics conversions/spherical2Car.md)
     - [theta2M](./Astrodynamics/Astrodynamics conversions/theta2M.md)
+    - [to_TCN](./Astrodynamics/Astrodynamics conversions/to_TCN.md)
     - [vinfBplane2car](./Astrodynamics/Astrodynamics conversions/vinfBplane2car.md)
     - [wrapECI2Synodic_SE](./Astrodynamics/Astrodynamics conversions/wrapECI2Synodic_SE.md)
   - Basic Transfers/
