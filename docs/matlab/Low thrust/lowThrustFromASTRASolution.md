@@ -8,23 +8,25 @@ for any leg of the trajectory, it terminates early. It generates an output struc
 the trajectory details, including mass evolution, delta-v, and time of flight for each leg of the mission.
 
 ## INPUT
-- astraSolution : structure containing ASTRA solution data
-- path      : trajectory path data
-- revs      : revolutions' options for each leg
-- res       : resonance options for each leg
-- vdep_free : velocity for free departure [km/s]
-- varr_free : velocity for free arrival [km/s]
+- astraSolution       : structure containing ASTRA solution data
+- path              : trajectory path data
+- revs              : revolutions' options for each leg
+- res               : resonance options for each leg
+- vdep_free         : velocity for free departure [km/s]
+- varr_free         : velocity for free arrival [km/s]
 - lowThrustParameters : structure containing low-thrust trajectory parameters
-- Tmax          : maximum thrust [N]
-- Isp           : specific impulse [s]
-- m0            : initial mass [kg]
-- gamma         : discount factor for the smoothing parameter (default is 0.5)
-- rhoLim        : limit on the smoothing parameter for optimal control solution (default is 0.001)
-- plot          : boolean flag to enable plotting of the thrust profile (default is false)
-- useParallel   : boolean flag to enable parallel computation (default is false)
-- g0            : gravitational acceleration constant [m/s^2]
-- idcentral         : ID of the central body for the transfer
-- customEphemerides : function handle for custom ephemerides
+- Tmax              : maximum thrust [N]
+- Isp               : specific impulse [s]
+- m0                : initial mass [kg]
+- gamma             : discount factor for the smoothing parameter (default is 0.5)
+- rhoLim            : limit on the smoothing parameter for optimal control solution (default is 0.001)
+- plot              : boolean flag to enable plotting of the thrust profile (default is false)
+- useParallel       : boolean flag to enable parallel computation (default is false)
+- g0                : gravitational acceleration constant [m/s^2]
+- idcentral           : ID of the central body for the transfer
+- customEphemerides   : function handle for custom ephemerides
+- use_energy_guess    : boolean to select if to use energy-optimal guess
+(default is true)
 
 ## OUTPUT
 - LT_SOLUTION : structure containing the low-thrust trajectory solution

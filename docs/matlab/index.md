@@ -120,6 +120,10 @@ Browse the automatically generated documentation:
   - [findDV](./Lambert problem and defects/findDV.md)
   - [lambertMR_MEXIFY](./Lambert problem and defects/lambertMR_MEXIFY.md)
   - [maxRev_LP](./Lambert problem and defects/maxRev_LP.md)
+- Launchers/
+  - [ariane_62_launcher](./Launchers/ariane_62_launcher.md)
+  - [ariane_64_launcher](./Launchers/ariane_64_launcher.md)
+  - [soyuz_stb_launcher](./Launchers/soyuz_stb_launcher.md)
 - Low thrust/
   - Plot_low_thrust/
     - [plotLT](./Low thrust/Plot_low_thrust/plotLT.md)
@@ -127,15 +131,22 @@ Browse the automatically generated documentation:
     - [wrapPlotLTFull](./Low thrust/Plot_low_thrust/wrapPlotLTFull.md)
   - Processing_low_thrust/
     - [postProcessLT](./Low thrust/Processing_low_thrust/postProcessLT.md)
+    - [postProcessLT_SEP](./Low thrust/Processing_low_thrust/postProcessLT_SEP.md)
     - [postProcessPathASTRA_lowThrust](./Low thrust/Processing_low_thrust/postProcessPathASTRA_lowThrust.md)
     - [processDataAndWriteParam](./Low thrust/Processing_low_thrust/processDataAndWriteParam.md)
     - [writeParamLT](./Low thrust/Processing_low_thrust/writeParamLT.md)
   - Propagation_optimal_control/
     - [propagateEopt_MEXIFY](./Low thrust/Propagation_optimal_control/propagateEopt_MEXIFY.md)
     - [propagateFopt_MEXIFY](./Low thrust/Propagation_optimal_control/propagateFopt_MEXIFY.md)
+    - [propagateFopt_SEP_MEXIFY](./Low thrust/Propagation_optimal_control/propagateFopt_SEP_MEXIFY.md)
+    - [propagateState_SEP](./Low thrust/Propagation_optimal_control/propagateState_SEP.md)
     - [propagateState_vA](./Low thrust/Propagation_optimal_control/propagateState_vA.md)
+  - Thrust_profiles/
+    - [func_thrust_fitted](./Low thrust/Thrust_profiles/func_thrust_fitted.md)
+    - [func_thrust_true](./Low thrust/Thrust_profiles/func_thrust_true.md)
   - [lowThrustFromASTRASolution](./Low thrust/lowThrustFromASTRASolution.md)
   - [wrapSolveFopt](./Low thrust/wrapSolveFopt.md)
+  - [wrapSolveFoptSEP](./Low thrust/wrapSolveFoptSEP.md)
 - Pareto front/
   - [paretoFront](./Pareto front/paretoFront.md)
   - [paretoFront_MODP](./Pareto front/paretoFront_MODP.md)

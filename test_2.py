@@ -2,7 +2,7 @@ import os
 import re
 
 # Input: folder containing your MATLAB .m files
-MATLAB_SRC = "C:/Users/andre/Documents/GitHub/astra/ASTRA"
+MATLAB_SRC = "C:/Users/Andrea/Documents/GitHub/astra/ASTRA"
 # Output: where to put the markdown docs (inside your mkdocs project)
 DOCS_OUT = "docs/matlab"
 
