@@ -1,2 +1,3 @@
-env/
 site/
+virtenv/
+__pycache__/
