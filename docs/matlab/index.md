@@ -21,6 +21,7 @@ Browse the automatically generated documentation:
     - [theta2M](./Astrodynamics/Astrodynamics conversions/theta2M.md)
     - [to_TCN](./Astrodynamics/Astrodynamics conversions/to_TCN.md)
     - [vinfBplane2car](./Astrodynamics/Astrodynamics conversions/vinfBplane2car.md)
+    - [vinfVec2VinfBplane](./Astrodynamics/Astrodynamics conversions/vinfVec2VinfBplane.md)
     - [wrapECI2Synodic_SE](./Astrodynamics/Astrodynamics conversions/wrapECI2Synodic_SE.md)
   - Basic Transfers/
     - [hohmann_transfer](./Astrodynamics/Basic Transfers/hohmann_transfer.md)

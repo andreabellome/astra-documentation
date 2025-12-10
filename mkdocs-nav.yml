@@ -18,6 +18,7 @@
       - theta2M: matlab/Astrodynamics/Astrodynamics conversions/theta2M.md
       - to_TCN: matlab/Astrodynamics/Astrodynamics conversions/to_TCN.md
       - vinfBplane2car: matlab/Astrodynamics/Astrodynamics conversions/vinfBplane2car.md
+      - vinfVec2VinfBplane: matlab/Astrodynamics/Astrodynamics conversions/vinfVec2VinfBplane.md
       - wrapECI2Synodic_SE: matlab/Astrodynamics/Astrodynamics conversions/wrapECI2Synodic_SE.md
     - Basic Transfers:
       - hohmann_transfer: matlab/Astrodynamics/Basic Transfers/hohmann_transfer.md
