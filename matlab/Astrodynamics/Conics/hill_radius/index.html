@@ -1523,17 +1523,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1549,6 +1538,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7845,13 +7845,6 @@
 
 
 <h1 id="hill_radius"><code>hill_radius</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function computes the Hill radius of a secondary body orbiting a
-central body. The Hill radius represents the region around the secondary
-body where its gravitational influence dominates over the tidal forces of
-the central body. If the central body is Earth (ID 1) and the secondary
-body is the Sun (ID 3), the mass of the Moon is also included in the
-calculation.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>r_hill         : Hill radius of the secondary body [km]</li>
@@ -7861,6 +7854,13 @@ calculation.</p>
 <li>idcentral       : integer identifier of the central body</li>
 <li>secondary_body  : integer identifier of the secondary body</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function computes the Hill radius of a secondary body orbiting a
+central body. The Hill radius represents the region around the secondary
+body where its gravitational influence dominates over the tidal forces of
+the central body. If the central body is Earth (ID 1) and the secondary
+body is the Sun (ID 3), the mass of the Moon is also included in the
+calculation.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[r_hill] = hill_radius( idcentral, secondary_body )
 </code></pre>

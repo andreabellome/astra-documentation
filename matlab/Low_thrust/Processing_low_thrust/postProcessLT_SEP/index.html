@@ -4946,17 +4946,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4972,6 +4961,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7845,10 +7845,6 @@
 
 
 <h1 id="postprocesslt_sep"><code>postProcessLT_SEP</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function processes the results of a low-thrust trajectory optimization
-by converting scaled states back to physical units, extracting the thrust
-profile, and assembling all relevant trajectory data into a single matrix.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>transfer : Matrix containing the processed trajectory data with the
@@ -7874,6 +7870,10 @@ including:</li>
 <li>g0Scl     : Scaled gravitational acceleration.</li>
 <li>rho       : Density parameter for the propulsion model.</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function processes the results of a low-thrust trajectory optimization
+by converting scaled states back to physical units, extracting the thrust
+profile, and assembling all relevant trajectory data into a single matrix.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[transfer] = postProcessLT_SEP( time, states, propFunction, pm )
 </code></pre>

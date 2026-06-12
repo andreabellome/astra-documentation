@@ -5760,17 +5760,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5786,6 +5775,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7843,10 +7843,6 @@
 
 
 <h1 id="plotpareto"><code>plotPareto</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function plots the Pareto front of solutions on a 2D plot, with the x-axis representing
-time of flight (in years) and the y-axis representing delta-v (in km/s). The plot can be
-customized with various input arguments to hold the plot, change markers, colors, and add labels.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>fig : Handle to the created or modified figure.</li>
@@ -7862,6 +7858,10 @@ If holdon == 1, the current plot is held; otherwise, a new plot is created.</li>
 <li>name        : String specifying the name to be used in the legend for this Pareto front.</li>
 <li>markersize  : Scalar value specifying the size of the plot markers.</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function plots the Pareto front of solutions on a 2D plot, with the x-axis representing
+time of flight (in years) and the y-axis representing delta-v (in km/s). The plot can be
+customized with various input arguments to hold the plot, change markers, colors, and add labels.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[fig] = plotPareto(paretofront, holdon, marker, color, name, markersize)
 </code></pre>

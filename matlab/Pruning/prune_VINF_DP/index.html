@@ -6486,17 +6486,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6512,6 +6501,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7843,11 +7843,6 @@
 
 
 <h1 id="prune_vinf_dp"><code>prune_VINF_DP</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function prunes the sets of legs, velocity asymptotes (VAS), and
-velocity-infinity vectors (VINF) based on specified velocity-infinity
-limits. It removes entries where the velocity-infinity exceeds or is less
-than the given limits.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>LEGSnext : Pruned matrix of legs data, with entries removed based on
@@ -7867,6 +7862,11 @@ represents the velocity-infinity data.</li>
 <li>vInfOpts : A 2-element vector with minimum and maximum
 allowable velocity-infinity values.</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function prunes the sets of legs, velocity asymptotes (VAS), and
+velocity-infinity vectors (VINF) based on specified velocity-infinity
+limits. It removes entries where the velocity-infinity exceeds or is less
+than the given limits.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LEGSnext, VASnext, VINFnext] = prune_VINF_DP(LEGSnext, VASnext, VINFnext, INPUT)
 </code></pre>

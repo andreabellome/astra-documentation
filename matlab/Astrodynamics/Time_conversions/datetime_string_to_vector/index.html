@@ -1969,17 +1969,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1995,6 +1984,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7845,12 +7845,6 @@
 
 
 <h1 id="datetime_string_to_vector"><code>datetime_string_to_vector</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function converts a date-time string in ISO 8601 format
-('yyyy-MM-ddTHH:mm:ss.SSSSSS') into a numerical vector of six elements
-representing year, month, day, hour, minute, and second. It is useful
-when date components are required in numerical form for further
-computations or analysis.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>vec    : 1x6 numerical vector [YYYY MM DD HH MM SS]. The seconds value
@@ -7860,6 +7854,12 @@ is returned as an integer if it has no decimal part.</li>
 <ul>
 <li>dt_str : date-time string in the format 'YYYY-MM-DDTHH:MM:SS.SSSSSS'</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function converts a date-time string in ISO 8601 format
+('yyyy-MM-ddTHH:mm:ss.SSSSSS') into a numerical vector of six elements
+representing year, month, day, hour, minute, and second. It is useful
+when date components are required in numerical form for further
+computations or analysis.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[vec] = datetime_string_to_vector(dt_str)
 </code></pre>

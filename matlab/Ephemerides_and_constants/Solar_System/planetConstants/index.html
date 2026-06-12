@@ -3972,17 +3972,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3998,6 +3987,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7845,10 +7845,6 @@
 
 
 <h1 id="planetconstants"><code>planetConstants</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function extracts body parameters for Solar System planets, assuming
-circular coplanar orbits of the flyby bodies around the central body.
-Each body is assumed to be a perfect sphere.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>muPL   : gravitational parameter of the body [km3/s2]</li>
@@ -7865,6 +7861,10 @@ timeframe [km]</li>
 <li>idPL : flyby body ID (1. Mercury, 2. Venus, 3. Earth, 4. Mars, 5.
 Jupiter, 6. Saturn, 7. Uranus, 8. Neptune)</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function extracts body parameters for Solar System planets, assuming
+circular coplanar orbits of the flyby bodies around the central body.
+Each body is assumed to be a perfect sphere.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[muPL, radius, sma, rpMin, raMin, hmin] = planetConstants(idPL)
 </code></pre>

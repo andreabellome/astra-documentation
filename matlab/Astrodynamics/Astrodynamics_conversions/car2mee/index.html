@@ -853,17 +853,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -879,6 +868,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7845,12 +7845,6 @@
 
 
 <h1 id="car2mee"><code>car2mee</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function converts Cartesian state vectors into Modified Equinoctial
-Elements (MEE). It first converts position and velocity vectors into
-Keplerian orbital elements, and subsequently transforms those into MEE.
-The MEE representation avoids singularities for zero inclination and
-eccentricity, making it suitable for a wide range of orbital regimes.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>mee : vector of Modified Equinoctial Elements [p, f, g, h, k, L]
@@ -7869,6 +7863,12 @@ r = position vector [km]
 v = velocity vector [km/s]</li>
 <li>mu  : gravitational parameter of the central body [km^3/s^2]</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function converts Cartesian state vectors into Modified Equinoctial
+Elements (MEE). It first converts position and velocity vectors into
+Keplerian orbital elements, and subsequently transforms those into MEE.
+The MEE representation avoids singularities for zero inclination and
+eccentricity, making it suitable for a wide range of orbital regimes.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[mee] = car2mee( car, mu )
 </code></pre>

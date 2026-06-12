@@ -5370,17 +5370,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5396,6 +5385,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7843,12 +7843,6 @@
 
 
 <h1 id="lowthrustfromastrasolution"><code>lowThrustFromASTRASolution</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function is used to process the ASTRA solution for low-thrust trajectory optimization.
-It processes the trajectory data, computes the thrust profile, and solves for the optimal
-solution based on the given parameters and constraints. If the thrust system is insufficient
-for any leg of the trajectory, it terminates early. It generates an output structure that includes
-the trajectory details, including mass evolution, delta-v, and time of flight for each leg of the mission.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>LT_SOLUTION : structure containing the low-thrust trajectory solution</li>
@@ -7883,6 +7877,12 @@ delta-v, and other trajectory details</li>
 <li>use_energy_guess    : boolean to select if to use energy-optimal guess
 (default is true)</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function is used to process the ASTRA solution for low-thrust trajectory optimization.
+It processes the trajectory data, computes the thrust profile, and solves for the optimal
+solution based on the given parameters and constraints. If the thrust system is insufficient
+for any leg of the trajectory, it terminates early. It generates an output structure that includes
+the trajectory details, including mass evolution, delta-v, and time of flight for each leg of the mission.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LT_SOLUTION, struc] = lowThrustFromASTRASolution( astraSolution, lowThrustParameters, idcentral, customEphemerides )
 </code></pre>

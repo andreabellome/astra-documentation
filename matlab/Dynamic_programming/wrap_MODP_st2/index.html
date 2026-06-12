@@ -3228,17 +3228,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3254,6 +3243,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7843,12 +7843,6 @@
 
 
 <h1 id="wrap_modp_st2"><code>wrap_MODP_st2</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function wraps the Multi-Objective Dynamic Programming (MODP) process for the
-second stage of trajectory optimization. It evaluates possible trajectories for the
-spacecraft, computes their feasibility, and prunes non-optimal paths using parallel
-or sequential processing. The function ultimately selects and saves the best
-trajectories based on a cost function.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>LEGSn    : Matrix containing the next legs after processing and optimization.</li>
@@ -7869,6 +7863,12 @@ trajectories based on a cost function.</p>
 <li>INPUT    : Struct containing additional input parameters, including DSM options
 and the parallel processing flag.</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function wraps the Multi-Objective Dynamic Programming (MODP) process for the
+second stage of trajectory optimization. It evaluates possible trajectories for the
+spacecraft, computes their feasibility, and prunes non-optimal paths using parallel
+or sequential processing. The function ultimately selects and saves the best
+trajectories based on a cost function.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LEGSn, VASn, VINFn, nLP, nDEF] = wrap_MODP_st2(LEGSnext, VASnext, legs, runOpts, indl, tstep, TOF_LIM, INPUT)
 </code></pre>

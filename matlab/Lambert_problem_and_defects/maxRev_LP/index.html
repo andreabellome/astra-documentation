@@ -4508,17 +4508,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4534,6 +4523,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DESCRIPTION
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         INPUT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
       
     </span>
   </a>
@@ -7843,12 +7843,6 @@
 
 
 <h1 id="maxrev_lp"><code>maxRev_LP</code></h1>
-<h2 id="description">DESCRIPTION</h2>
-<p>This function computes the maximum number of revolutions allowed for a
-Lambert arc based on the given time of flight and positions. It provides
-an estimate of how many full revolutions can fit within the provided
-transfer time, assuming the minimum semi-major axis for the two-body
-orbit connecting the input positions.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>NumRevMax : maximum number of full revolutions feasible within the
@@ -7861,6 +7855,12 @@ given time of flight [-]</li>
 <li>rr2        : final position vector [km]</li>
 <li>muCentral  : gravitational parameter of the central body [km^3/s^2]</li>
 </ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>This function computes the maximum number of revolutions allowed for a
+Lambert arc based on the given time of flight and positions. It provides
+an estimate of how many full revolutions can fit within the provided
+transfer time, assuming the minimum semi-major axis for the two-body
+orbit connecting the input positions.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[NumRevMax] = maxRev_LP(tof_days, rr1, rr2, muCentral)
 </code></pre>
