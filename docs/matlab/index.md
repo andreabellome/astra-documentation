@@ -188,6 +188,10 @@ Browse the automatically generated documentation:
   - [permn](./Revolutions options/permn.md)
   - [processResonances](./Revolutions options/processResonances.md)
   - [rev2RevOpt](./Revolutions options/rev2RevOpt.md)
+- SPICE Interface/
+  - [get_spice_loader](./SPICE Interface/get_spice_loader.md)
+  - [load_spice_kernels](./SPICE Interface/load_spice_kernels.md)
+  - [start_safe_parpool](./SPICE Interface/start_safe_parpool.md)
 - Time of flight options/
   - [TOF_per_LEGS_ASTRA](./Time of flight options/TOF_per_LEGS_ASTRA.md)
   - [tofGeneration_v2](./Time of flight options/tofGeneration_v2.md)
@@ -202,7 +206,6 @@ Browse the automatically generated documentation:
   - [minMaxFirstMan](./astra_optimization/minMaxFirstMan.md)
   - [optPSO](./astra_optimization/optPSO.md)
   - [path2FlybyParam](./astra_optimization/path2FlybyParam.md)
-  - [postProcessPathASTRA_dsm_lowThrust](./astra_optimization/postProcessPathASTRA_dsm_lowThrust.md)
   - [revs2NmanLeg](./astra_optimization/revs2NmanLeg.md)
   - [swingby_vA](./astra_optimization/swingby_vA.md)
   - [tnh2car](./astra_optimization/tnh2car.md)

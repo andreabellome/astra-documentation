@@ -215,6 +215,10 @@ nav:
                 - permn: matlab/Revolutions options/permn.md
                 - processResonances: matlab/Revolutions options/processResonances.md
                 - rev2RevOpt: matlab/Revolutions options/rev2RevOpt.md
+          - SPICE Interface:
+                - get_spice_loader: matlab/SPICE Interface/get_spice_loader.md
+                - load_spice_kernels: matlab/SPICE Interface/load_spice_kernels.md
+                - start_safe_parpool: matlab/SPICE Interface/start_safe_parpool.md
           - Time of flight options:
                 - TOF_per_LEGS_ASTRA: matlab/Time of flight options/TOF_per_LEGS_ASTRA.md
                 - tofGeneration_v2: matlab/Time of flight options/tofGeneration_v2.md
