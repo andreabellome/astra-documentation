@@ -101,7 +101,8 @@ local-folder/
             ├── naif0012.tls
             ├── pck00010.tpc
             └── sat375.bsp
-        └── mice
+        ├── mice
+        └── data.mk
 ├── clearDeleteAdd.m
 └── main_script.m
 ```
