@@ -1941,17 +1941,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1967,6 +1956,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,11 +7845,6 @@
 
 
 <h1 id="datetime_string_to_mjd2000"><code>datetime_string_to_mjd2000</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>date_mjd2000 : scalar value representing the Modified Julian Date
-referenced to epoch J2000 (days since 01 Jan 2000 12:00 TT)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>dt_str       : date-time string in the format 'YYYY-MM-DDTHH:MM:SS.SSSSSS'</li>
@@ -7860,6 +7855,11 @@ referenced to epoch J2000 (days since 01 Jan 2000 12:00 TT)</li>
 Date referenced to epoch J2000 (MJD2000). It is useful for converting
 human-readable timestamps into a numerical format commonly used in
 astrodynamics and orbital mechanics.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>date_mjd2000 : scalar value representing the Modified Julian Date
+referenced to epoch J2000 (days since 01 Jan 2000 12:00 TT)</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[ date_mjd2000 ] = datetime_string_to_mjd2000( dt_str )
 </code></pre>

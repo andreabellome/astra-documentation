@@ -1021,17 +1021,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1047,6 +1036,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,12 +7845,6 @@
 
 
 <h1 id="mee2car"><code>mee2car</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>car : 6x1 Cartesian state vector [rx, ry, rz, vx, vy, vz], where:</li>
-<li>r : position vector components in inertial frame [km]</li>
-<li>v : velocity vector components in inertial frame [km/s]</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>mee : 6x1 vector of Modified Equinoctial Elements [p, f, g, h, k, L], where:</li>
@@ -7866,6 +7860,12 @@
 <p>This function converts a state vector expressed in Modified Equinoctial
 Elements (MEE) into Cartesian coordinates (position and velocity) using
 an intermediate conversion to Classical Orbital Elements (COE).</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>car : 6x1 Cartesian state vector [rx, ry, rz, vx, vy, vz], where:</li>
+<li>r : position vector components in inertial frame [km]</li>
+<li>v : velocity vector components in inertial frame [km/s]</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[car] = mee2car( mee, mu )
 </code></pre>

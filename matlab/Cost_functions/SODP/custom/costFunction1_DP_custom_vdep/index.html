@@ -2742,17 +2742,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2779,6 +2768,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7794,17 +7794,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7831,6 +7820,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7869,12 +7869,6 @@
 
 
 <h1 id="costfunction1_dp_custom_vdep"><code>costFunction1_DP_custom_vdep</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>legn  : row vector corresponding to the optimal trajectory leg.</li>
-<li>vvf   : row vector corresponding to the final velocity of the optimal trajectory.</li>
-<li>vinff : row vector corresponding to the incoming excess velocity of the optimal trajectory.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>legn  : matrix containing trajectory leg parameters, where columns represent
@@ -7900,6 +7894,12 @@ the minimum cost.</p>
 <li>Identify the trajectory with the minimum total cost.</li>
 <li>Return the corresponding trajectory leg, final velocity, and incoming excess velocity.</li>
 </ol>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>legn  : row vector corresponding to the optimal trajectory leg.</li>
+<li>vvf   : row vector corresponding to the final velocity of the optimal trajectory.</li>
+<li>vinff : row vector corresponding to the incoming excess velocity of the optimal trajectory.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[legn, vvf, vinff] = costFunction1_DP_custom_vdep(legn, vvf, vinff, vdep, sigma)
 </code></pre>

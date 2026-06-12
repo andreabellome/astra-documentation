@@ -6123,17 +6123,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6149,6 +6138,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,15 +7843,6 @@
 
 
 <h1 id="path2vinfs"><code>path2Vinfs</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>VINFS : Matrix containing the departure and arrival v-infinity vectors
-and their magnitudes for each leg of the trajectory.</li>
-<li>vvd   : Matrix of v-infinity vectors at the departure of each leg.</li>
-<li>vva   : Matrix of v-infinity vectors at the arrival of each leg.</li>
-<li>rrd   : Matrix of position vectors at the departure of each leg.</li>
-<li>rra   : Matrix of position vectors at the arrival of each leg.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>path : Matrix where each row represents a state in the trajectory with
@@ -7863,6 +7854,15 @@ planetary ID, time, and v-infinity.</li>
 <p>This function computes the v-infinity vectors at each leg of a trajectory
 path. It calculates both the departure and arrival v-infinity vectors and
 their magnitudes based on the input path data.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>VINFS : Matrix containing the departure and arrival v-infinity vectors
+and their magnitudes for each leg of the trajectory.</li>
+<li>vvd   : Matrix of v-infinity vectors at the departure of each leg.</li>
+<li>vva   : Matrix of v-infinity vectors at the arrival of each leg.</li>
+<li>rrd   : Matrix of position vectors at the departure of each leg.</li>
+<li>rra   : Matrix of position vectors at the arrival of each leg.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[VINFS, vvd, vva, rrd, rra] = path2Vinfs(path, idcentral, customEphemerides)
 </code></pre>

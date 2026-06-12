@@ -2053,10 +2053,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -2064,10 +2064,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7770,10 +7770,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -7781,10 +7781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7823,6 +7823,12 @@
 
 
 <h1 id="jd2date"><code>jd2date</code></h1>
+<h2 id="input">INPUT</h2>
+<p>jd          Date in Julian Day. The JD (Julian day) count is from 0 at
+12:00 noon, 1 January -4712 (4713 BC), Julian proleptic
+calendar. The corresponding date in Gregorian calendar is
+12:00 noon, 24 November -4713. It must be a non-negative
+real.</p>
 <h2 id="output">OUTPUT</h2>
 <p>date        Date in the Gregorian calendar, as a 6-element vector
 [year, month, day, hour, minute, second]. For dates before
@@ -7846,12 +7852,6 @@ Mission Analysis and Design".
 - A revised version of the algorithm on Vallado, "Fundamentals of
 Astrodynamics and Applications", third edition, for dates from year
 1900 to year 2100.</p>
-<h2 id="input">INPUT</h2>
-<p>jd          Date in Julian Day. The JD (Julian day) count is from 0 at
-12:00 noon, 1 January -4712 (4713 BC), Julian proleptic
-calendar. The corresponding date in Gregorian calendar is
-12:00 noon, 24 November -4713. It must be a non-negative
-real.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[date] = jd2date(jd)
 </code></pre>

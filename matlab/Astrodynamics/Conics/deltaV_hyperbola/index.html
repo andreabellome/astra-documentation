@@ -1495,17 +1495,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1521,6 +1510,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,10 +7845,6 @@
 
 
 <h1 id="deltav_hyperbola"><code>deltaV_hyperbola</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>dv    : delta-v required for orbit insertion [km/s]</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>vinf  : excess velocity at infinity [km/s]</li>
@@ -7861,6 +7857,10 @@
 maneuver. It calculates the velocity at periapsis of the incoming hyperbola
 and compares it with the velocity required for an elliptical orbit to
 determine the necessary velocity change.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>dv    : delta-v required for orbit insertion [km/s]</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[ dv ] = deltaV_hyperbola( vinf, rpip, rat, mu )
 </code></pre>

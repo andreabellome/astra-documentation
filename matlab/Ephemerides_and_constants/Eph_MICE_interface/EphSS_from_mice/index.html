@@ -3360,17 +3360,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3386,6 +3375,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,11 +7845,6 @@
 
 
 <h1 id="ephss_from_mice"><code>EphSS_from_mice</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>rr : 1x3 position vector [km] of the body in the ecliptic J2000 frame</li>
-<li>vv : 1x3 velocity vector [km/s] of the body in the ecliptic J2000 frame</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>IDspk     : SPICE ID of the body (e.g., 399 for Earth). If the ID is &lt; 5,
@@ -7863,6 +7858,11 @@ supports value 1 (i.e., the Sun-centric frame).</li>
 <p>This function interfaces with the NASA NAIF MICE Toolkit to extract the
 position and velocity vectors of a solar system body at a given time. It
 is specifically designed for multiple gravity assist trajectory design.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>rr : 1x3 position vector [km] of the body in the ecliptic J2000 frame</li>
+<li>vv : 1x3 velocity vector [km/s] of the body in the ecliptic J2000 frame</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[rr, vv] = EphSS_from_mice(IDspk, t, idcentral)
 </code></pre>

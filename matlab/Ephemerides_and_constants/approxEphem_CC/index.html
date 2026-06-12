@@ -4145,17 +4145,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4171,6 +4160,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,12 +7843,6 @@
 
 
 <h1 id="approxephem_cc"><code>approxEphem_CC</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>rr  : 1x3 position vector of flyby body at epoch [km]</li>
-<li>vv  : 1x3 velocity vector of flyby body at epoch [km/s]</li>
-<li>kep : 1x6 keplerian elements of the flyby body at epoch (see car2kep.m)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>idmoon : ID of the flyby body (see constants.m)</li>
@@ -7858,6 +7852,12 @@
 <h2 id="description">DESCRIPTION</h2>
 <p>Approximate circular-coplanar ephemerides for different systems (e.g.,
 Solar System planets, Juputer moons,...)</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>rr  : 1x3 position vector of flyby body at epoch [km]</li>
+<li>vv  : 1x3 velocity vector of flyby body at epoch [km/s]</li>
+<li>kep : 1x6 keplerian elements of the flyby body at epoch (see car2kep.m)</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[rr, vv, kep] = approxEphem_CC(idmoon, t, idcentral)
 </code></pre>

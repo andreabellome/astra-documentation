@@ -2025,10 +2025,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -2036,10 +2036,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7770,10 +7770,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -7781,10 +7781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7823,6 +7823,13 @@
 
 
 <h1 id="hms2fracday"><code>hms2fracday</code></h1>
+<h2 id="input">INPUT</h2>
+<p>hrs        Number of hours as integer greater or equal to 0 and lower
+or equal to 23.
+mn         Number of minutes as integer greater or equal to 0 and
+lower or equal to 59.
+sec        Number of seconds as a real greater or equal to 0 and
+strictly lower than 60.</p>
 <h2 id="output">OUTPUT</h2>
 <p>fracDay    A single real greater or equal to 0 and strictly lower than
 1.
@@ -7831,13 +7838,6 @@ FUNCTIONS CALLED
 none
 - Nicolas Croisard - 16/02/2008
 - Revised by Camilla Colombo - 29/02/2008</p>
-<h2 id="input">INPUT</h2>
-<p>hrs        Number of hours as integer greater or equal to 0 and lower
-or equal to 23.
-mn         Number of minutes as integer greater or equal to 0 and
-lower or equal to 59.
-sec        Number of seconds as a real greater or equal to 0 and
-strictly lower than 60.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[fracDay] = hms2fracday(hrs, mn, sec)
 </code></pre>

@@ -6820,17 +6820,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6857,6 +6846,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7790,17 +7790,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7827,6 +7816,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7865,18 +7865,6 @@
 
 
 <h1 id="maxrevouterplanets"><code>maxRevOuterPlanets</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>chosenRevs : Updated matrix where the revolutions for the outer planets (IDs 5 to 1192)
-are set to zero. Each column corresponds to a leg of the sequence of flyby bodies.
-The coding is as follows:
-0  --&gt; means 0 revolutions on the leg.
-10 --&gt; means 1 revolution and case 0 (low energy) on the leg.
-11 --&gt; means 1 revolution and case 1 (high energy) on the leg.
-20 --&gt; means 2 revolutions and case 0 (low energy) on the leg.
-21 --&gt; means 2 revolutions and case 1 (high energy) on the leg.
-and so on...</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>seq        : Sequence of IDs for flyby bodies, indicating the order in which they are visited.</li>
@@ -7895,6 +7883,18 @@ are performed for these specific outer planets.</p>
 <li>Determine the number of legs up to the identified index.</li>
 <li>Update the chosenRevs matrix by setting the revolutions for these legs to 0.</li>
 <li>Ensure that the updated matrix has unique rows in a stable order.</li>
+</ul>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>chosenRevs : Updated matrix where the revolutions for the outer planets (IDs 5 to 1192)
+are set to zero. Each column corresponds to a leg of the sequence of flyby bodies.
+The coding is as follows:
+0  --&gt; means 0 revolutions on the leg.
+10 --&gt; means 1 revolution and case 0 (low energy) on the leg.
+11 --&gt; means 1 revolution and case 1 (high energy) on the leg.
+20 --&gt; means 2 revolutions and case 0 (low energy) on the leg.
+21 --&gt; means 2 revolutions and case 1 (high energy) on the leg.
+and so on...</li>
 </ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[chosenRevs] = maxRevOuterPlanets(seq, chosenRevs, idcentral)

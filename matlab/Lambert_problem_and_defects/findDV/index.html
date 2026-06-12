@@ -4452,17 +4452,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4478,6 +4467,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,12 +7843,6 @@
 
 
 <h1 id="finddv"><code>findDV</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>dv      : DV defect manoeuvre [km/s]</li>
-<li>alpha   : deflection required for the flyby [rad]</li>
-<li>alpha_A : max. deflection for the minimum periapsis flyby [rad]</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>vvrel_A : 1x3 vector with incoming relative velocity [km/s]</li>
@@ -7858,6 +7852,12 @@
 </ul>
 <h2 id="description">DESCRIPTION</h2>
 <p>This function computes DV defects.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>dv      : DV defect manoeuvre [km/s]</li>
+<li>alpha   : deflection required for the flyby [rad]</li>
+<li>alpha_A : max. deflection for the minimum periapsis flyby [rad]</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[dv, alpha, alpha_A] = findDV(vvrel_A, vvrel_D, muPL, rpmin)
 </code></pre>

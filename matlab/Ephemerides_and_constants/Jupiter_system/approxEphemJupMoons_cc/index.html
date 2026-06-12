@@ -3527,17 +3527,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3564,6 +3553,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7792,17 +7792,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7829,6 +7818,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7867,12 +7867,6 @@
 
 
 <h1 id="approxephemjupmoons_cc"><code>approxEphemJupMoons_cc</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>rr     : Position vector of the moon at time t (in kilometers).</li>
-<li>vv     : Velocity vector of the moon at time t (in kilometers per second).</li>
-<li>kep    : Keplerian elements of the moon at time t.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>idmoon : Integer identifier for the Jupiter moon:
@@ -7892,6 +7886,12 @@ but not for mission design purposes.</p>
 <li>Defines reference epoch and initial Keplerian elements for each moon.</li>
 <li>Computes the position and velocity vectors by propagating the initial
 Keplerian elements to the given time using the FGKepler_dt function.</li>
+</ul>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>rr     : Position vector of the moon at time t (in kilometers).</li>
+<li>vv     : Velocity vector of the moon at time t (in kilometers per second).</li>
+<li>kep    : Keplerian elements of the moon at time t.</li>
 </ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[rr, vv, kep] = approxEphemJupMoons_cc(idmoon, t)

@@ -7601,17 +7601,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7627,6 +7616,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,13 +7843,6 @@
 
 
 <h1 id="swingby_va"><code>swingby_vA</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>rrOU    : output position vector after swing-by (1×3) [km]</li>
-<li>vvOU    : output velocity vector after swing-by (1×3) [km/s]</li>
-<li>vvInfIN : incoming hyperbolic excess velocity vector (1×3) [km/s]</li>
-<li>vvInfOU : outgoing hyperbolic excess velocity vector (1×3) [km/s]</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>rrIN              : incoming position vector at swing-by (1×3) [km]</li>
@@ -7870,6 +7863,13 @@ gravity assist (swing-by) maneuver. The maneuver is modeled as an
 instantaneous velocity rotation of the incoming hyperbolic excess vector
 with a specified turn angle and plane orientation. The central body
 ephemerides are retrieved using a default or user-defined function.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>rrOU    : output position vector after swing-by (1×3) [km]</li>
+<li>vvOU    : output velocity vector after swing-by (1×3) [km/s]</li>
+<li>vvInfIN : incoming hyperbolic excess velocity vector (1×3) [km/s]</li>
+<li>vvInfOU : outgoing hyperbolic excess velocity vector (1×3) [km/s]</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[rrOU, vvOU, vvInfIN, vvInfOU] = swingby_vA(rrIN, vvIN, plIN, tIN, kIN, rpIN, muPLIN, idcentral, customEphemerides)
 </code></pre>

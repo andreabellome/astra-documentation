@@ -1551,10 +1551,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -1562,10 +1562,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7770,10 +7770,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -7781,10 +7781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7823,18 +7823,18 @@
 
 
 <h1 id="hyperbola_peri_time"><code>hyperbola_peri_time</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>t_since_peri : time since periapsis (s). Positive if after periapsis.</li>
-<li>t_to_peri    : time to periapsis (s). Positive if periapsis is in the future.</li>
-<li>H            : hyperbolic anomaly (signed)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>a  : semi-major axis (km), negative for hyperbola</li>
 <li>e  : eccentricity (&gt;1)</li>
 <li>mu : gravitational parameter (km^3/s^2)</li>
 <li>f  : true anomaly (rad)</li>
+</ul>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>t_since_peri : time since periapsis (s). Positive if after periapsis.</li>
+<li>t_to_peri    : time to periapsis (s). Positive if periapsis is in the future.</li>
+<li>H            : hyperbolic anomaly (signed)</li>
 </ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[t_since_peri, t_to_peri, H] = hyperbola_peri_time(a, e, mu, f)

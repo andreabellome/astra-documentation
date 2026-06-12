@@ -6709,17 +6709,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6735,6 +6724,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,12 +7843,6 @@
 
 
 <h1 id="wrapconstructionresonance_dp"><code>wrapConstructionResonance_DP</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>LEGSn  : Matrix of legs after constructing resonant orbits.</li>
-<li>VASn   : Matrix of velocities after constructing resonant orbits.</li>
-<li>VINFn  : Matrix of hyperbolic excess velocities after constructing resonant orbits.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>LEGSnext : Matrix containing the legs of the spacecraft's trajectory, where each row
@@ -7865,6 +7859,12 @@ corresponds to a different leg.</li>
 <p>This function attempts to construct resonant orbits for a spacecraft trajectory
 by checking if resonances can be achieved and then generating the corresponding
 resonant orbits. It operates in both parallel and sequential modes.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>LEGSn  : Matrix of legs after constructing resonant orbits.</li>
+<li>VASn   : Matrix of velocities after constructing resonant orbits.</li>
+<li>VINFn  : Matrix of hyperbolic excess velocities after constructing resonant orbits.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LEGSn, VASn, VINFn] = wrapConstructionResonance_DP(LEGSnext, VASnext, VINFnext, legs, res, indl, tolINCL, parallel, idcentral, customEphemerides)
 </code></pre>

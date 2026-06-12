@@ -1049,17 +1049,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1075,6 +1064,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,16 +7845,6 @@
 
 
 <h1 id="mee2kep"><code>mee2kep</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>kep : 1x6 vector of Classical Orbital Elements [a, e, i, RAAN, ω, θ], where:</li>
-<li>a     : semi-major axis [km]</li>
-<li>e     : eccentricity</li>
-<li>i     : inclination [rad]</li>
-<li>Omega : right ascension of ascending node [rad]</li>
-<li>omega : argument of pericenter [rad]</li>
-<li>theta : true anomaly [rad]</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>mee : 6x1 vector of Modified Equinoctial Elements [p, f, g, h, k, L], where:</li>
@@ -7868,6 +7858,16 @@
 <h2 id="description">DESCRIPTION</h2>
 <p>This function converts a vector of Modified Equinoctial Elements (MEE) to
 the equivalent set of Classical Orbital Elements (COE).</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>kep : 1x6 vector of Classical Orbital Elements [a, e, i, RAAN, ω, θ], where:</li>
+<li>a     : semi-major axis [km]</li>
+<li>e     : eccentricity</li>
+<li>i     : inclination [rad]</li>
+<li>Omega : right ascension of ascending node [rad]</li>
+<li>omega : argument of pericenter [rad]</li>
+<li>theta : true anomaly [rad]</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[kep] = mee2kep(mee)
 </code></pre>

@@ -5788,17 +5788,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5814,6 +5803,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,26 +7843,6 @@
 
 
 <h1 id="plotpath"><code>plotPath</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>figECI : handle to the figure showing the spacecraft trajectory and
-planets' orbits in the ECI frame.</li>
-<li>STRUC  : structure containing trajectory and planet data including:</li>
-<li>StatesSC : spacecraft states in ECI frame</li>
-<li>EpochsSC : time epochs corresponding to spacecraft states</li>
-<li>TOFsSC   : time of flight between waypoints</li>
-<li>DistSC   : distance from the Sun over time</li>
-<li>VelSC    : spacecraft velocity over time</li>
-<li>SatesScFB : state vectors at flyby points</li>
-<li>EpochsScFB : epochs of flyby points</li>
-<li>Planets  : structure array of planets' states in the ECI and
-Synodic frames</li>
-<li>figSYN : handle to the figure showing the spacecraft trajectory and
-planets' orbits in the Synodic frame.</li>
-<li>figRSC : handle to the figure showing the distance from the Sun over
-time.</li>
-<li>figVSC : handle to the figure showing the spacecraft velocity over time.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>path      : Nx8 matrix where each row contains the state vector of the
@@ -7883,6 +7863,26 @@ is based on the provided path data, which includes the state vectors at
 different time points. The function also generates plots in both the
 ECI (Earth-Centered Inertial) and Synodic reference frames, as well as
 plots of distance and velocity over time.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>figECI : handle to the figure showing the spacecraft trajectory and
+planets' orbits in the ECI frame.</li>
+<li>STRUC  : structure containing trajectory and planet data including:</li>
+<li>StatesSC : spacecraft states in ECI frame</li>
+<li>EpochsSC : time epochs corresponding to spacecraft states</li>
+<li>TOFsSC   : time of flight between waypoints</li>
+<li>DistSC   : distance from the Sun over time</li>
+<li>VelSC    : spacecraft velocity over time</li>
+<li>SatesScFB : state vectors at flyby points</li>
+<li>EpochsScFB : epochs of flyby points</li>
+<li>Planets  : structure array of planets' states in the ECI and
+Synodic frames</li>
+<li>figSYN : handle to the figure showing the spacecraft trajectory and
+planets' orbits in the Synodic frame.</li>
+<li>figRSC : handle to the figure showing the distance from the Sun over
+time.</li>
+<li>figVSC : handle to the figure showing the spacecraft velocity over time.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[figECI, STRUC, figSYN, figRSC, figVSC] = plotPath(path, idcentral, customEphemerides, holdon, color, firstL)
 </code></pre>

@@ -5370,17 +5370,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5396,6 +5385,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,18 +7843,6 @@
 
 
 <h1 id="lowthrustfromastrasolution"><code>lowThrustFromASTRASolution</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>LT_SOLUTION : structure containing the low-thrust trajectory solution</li>
-<li>LTsol : low-thrust solution for each leg, including mass, time of flight,
-delta-v, and other trajectory details</li>
-<li>m0                : initial mass at the beginning of the leg</li>
-<li>mf                : final mass after the leg</li>
-<li>mp                : mass change during the leg</li>
-<li>DV                : delta-v for the leg</li>
-<li>tof               : time of flight for the leg</li>
-<li>cumulative_tof    : cumulative time of flight for all legs</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>astraSolution       : structure containing ASTRA solution data</li>
@@ -7883,6 +7871,18 @@ It processes the trajectory data, computes the thrust profile, and solves for th
 solution based on the given parameters and constraints. If the thrust system is insufficient
 for any leg of the trajectory, it terminates early. It generates an output structure that includes
 the trajectory details, including mass evolution, delta-v, and time of flight for each leg of the mission.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>LT_SOLUTION : structure containing the low-thrust trajectory solution</li>
+<li>LTsol : low-thrust solution for each leg, including mass, time of flight,
+delta-v, and other trajectory details</li>
+<li>m0                : initial mass at the beginning of the leg</li>
+<li>mf                : final mass after the leg</li>
+<li>mp                : mass change during the leg</li>
+<li>DV                : delta-v for the leg</li>
+<li>tof               : time of flight for the leg</li>
+<li>cumulative_tof    : cumulative time of flight for all legs</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[LT_SOLUTION, struc] = lowThrustFromASTRASolution( astraSolution, lowThrustParameters, idcentral, customEphemerides )
 </code></pre>

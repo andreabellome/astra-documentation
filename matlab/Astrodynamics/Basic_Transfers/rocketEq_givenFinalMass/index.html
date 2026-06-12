@@ -1356,17 +1356,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1382,6 +1371,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,12 +7845,6 @@
 
 
 <h1 id="rocketeq_givenfinalmass"><code>rocketEq_givenFinalMass</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>dv : velocity change (delta-v) required (m/s)</li>
-<li>k  : mass ratio, defined as propellant mass fraction (mp/m0)</li>
-<li>mp : propellant mass expended (kg)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>m0  : initial mass of the rocket (kg)</li>
@@ -7862,6 +7856,12 @@
 <p>This function computes the velocity change (delta-v) required to reach a given
 final mass using the Tsiolkovsky rocket equation. It also calculates the
 propellant mass expended and the mass ratio.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>dv : velocity change (delta-v) required (m/s)</li>
+<li>k  : mass ratio, defined as propellant mass fraction (mp/m0)</li>
+<li>mp : propellant mass expended (kg)</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[dv, k, mp] = rocketEq_givenFinalMass(m0, mf, Isp, g0)
 </code></pre>

@@ -5928,17 +5928,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5954,6 +5943,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7768,17 +7768,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7794,6 +7783,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7821,23 +7821,16 @@
 
 
 <h1 id="write_mga_param"><code>write_mga_param</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>out : File identifier of the generated text file containing:
-launch conditions (v∞, RA, Dec),
-flyby parameters (v∞, B-plane parameters, true anomaly, periapsis
-altitude), and arrival conditions (v∞ at target body).</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
-<li>struc : Structure array defining the trajectory sequence. Each element contains:
-idD [--] departing body ID for leg i
-idA [--] arriving body ID for leg i
-tD [MJD2000] departure epoch of leg i
-tA [MJD2000] arrival epoch of leg i
-xxDtar [km, km/s] state vector at departure (position and velocity)
-xxAtar [km, km/s] state vector at arrival (position and velocity)
-dvA [km/s] arrival impulsive velocity change (optional)</li>
+<li>struc : Structure array defining the trajectory sequence. Each element contains:</li>
+<li>idD [--] departing body ID for leg i</li>
+<li>idA [--] arriving body ID for leg i</li>
+<li>tD [MJD2000] departure epoch of leg i</li>
+<li>tA [MJD2000] arrival epoch of leg i</li>
+<li>xxDtar [km, km/s] state vector at departure (position and velocity)</li>
+<li>xxAtar [km, km/s] state vector at arrival (position and velocity)</li>
+<li>dvA [km/s] arrival impulsive velocity change (optional)</li>
 <li>INPUT : Structure containing global parameters:
 idcentral [--] central body identifier
 customEphemerides [km, km/s] function handle returning body state;
@@ -7848,6 +7841,13 @@ path is used.</li>
 </ul>
 <h2 id="description">DESCRIPTION</h2>
 <p>This function generates a formatted text file summarizing a multi-leg interplanetary transfer sequence, including launch conditions, intermediate planetary flybys, and final arrival conditions. It computes and reports hyperbolic excess velocity vectors, launch asymptotic direction, flyby B-plane parameters, and periapsis altitude using ephemerides and planetary constants. The output is structured as a human-readable report suitable for trajectory design analysis and mission documentation.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>out : File identifier of the generated text file containing:
+launch conditions (v∞, RA, Dec),
+flyby parameters (v∞, B-plane parameters, true anomaly, periapsis
+altitude), and arrival conditions (v∞ at target body).</li>
+</ul>
 
 
 

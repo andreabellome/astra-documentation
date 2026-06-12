@@ -5537,17 +5537,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5563,6 +5552,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,6 +7843,13 @@
 
 
 <h1 id="paretofront_modp"><code>paretoFront_MODP</code></h1>
+<h2 id="input">INPUT</h2>
+<ul>
+<li>COSTmatrix : N-by-D matrix, where N is the number of points and D is the
+number of elements (objectives) of each point.</li>
+</ul>
+<h2 id="description">DESCRIPTION</h2>
+<p>Wrapper for computing Pareto front in MODP.</p>
 <h2 id="output">OUTPUT</h2>
 <ul>
 <li>PARETO_FRONT : matrix with Pareto front as follows:</li>
@@ -7852,13 +7859,6 @@ COSTmatrix</li>
 <li>PARETO_UNIQUE : same as PARETO_FRONT but with unique points w.r.t. the
 first objective</li>
 </ul>
-<h2 id="input">INPUT</h2>
-<ul>
-<li>COSTmatrix : N-by-D matrix, where N is the number of points and D is the
-number of elements (objectives) of each point.</li>
-</ul>
-<h2 id="description">DESCRIPTION</h2>
-<p>Wrapper for computing Pareto front in MODP.</p>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[PARETO_FRONT, PARETO_UNIQUE] = paretoFront_MODP( COSTmatrix )
 </code></pre>

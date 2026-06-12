@@ -2977,17 +2977,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3003,6 +2992,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,11 +7843,6 @@
 
 
 <h1 id="astra_dates"><code>ASTRA_dates</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>OUTPUT : structure array containing the computed trajectories and their
-associated costs for each considered launch date.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>INPUT : structure containing mission parameters, including launch date
@@ -7859,6 +7854,11 @@ options, plotting options, and other necessary configurations.</li>
 optimal trajectory for a spacecraft given a range of launch dates.
 It iteratively computes the trajectory and cost for each launch date,
 then post-processes the results to determine the minimum cost trajectory.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>OUTPUT : structure array containing the computed trajectories and their
+associated costs for each considered launch date.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[OUTPUT] = ASTRA_dates(INPUT, seq)
 </code></pre>

@@ -4779,17 +4779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4805,6 +4794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,15 +7845,6 @@
 
 
 <h1 id="plotlt"><code>plotLT</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>Trajectory in 3D space</li>
-<li>Mass evolution over time</li>
-<li>Thrust magnitude over time</li>
-<li>figTRAJ   : Figure handle for the trajectory plot</li>
-<li>figMASS   : Figure handle for the mass evolution plot (optional)</li>
-<li>figTHRmag : Figure handle for the thrust magnitude plot (optional)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>transfer: Matrix containing trajectory and associated parameters:</li>
@@ -7868,6 +7859,15 @@
 <h2 id="description">DESCRIPTION</h2>
 <p>This function plots the trajectory, mass evolution, and thrust magnitude
 for a low-thrust space trajectory. Depending on the number of requested</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>Trajectory in 3D space</li>
+<li>Mass evolution over time</li>
+<li>Thrust magnitude over time</li>
+<li>figTRAJ   : Figure handle for the trajectory plot</li>
+<li>figMASS   : Figure handle for the mass evolution plot (optional)</li>
+<li>figTHRmag : Figure handle for the thrust magnitude plot (optional)</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[figTRAJ, figMASS, figTHRmag] = plotLT( transfer, param, holdon )
 </code></pre>

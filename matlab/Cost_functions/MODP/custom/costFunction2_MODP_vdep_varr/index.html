@@ -2520,17 +2520,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2557,6 +2546,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7794,17 +7794,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7831,6 +7820,17 @@
     <span class="md-ellipsis">
       
         PROCESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7869,17 +7869,6 @@
 
 
 <h1 id="costfunction2_modp_vdep_varr"><code>costFunction2_MODP_vdep_varr</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>legn     : matrix containing the trajectory legs that belong to the Pareto front.</li>
-<li>vvf      : matrix containing the final velocities of the Pareto-optimal trajectories.</li>
-<li>vinff    : matrix containing the incoming excess velocities of the Pareto-optimal trajectories.</li>
-<li>PF       : matrix representing the Pareto front, storing time-of-flight and total cost.</li>
-<li>COSTS    : vector containing the total cost (delta-v + weighted time-of-flight) for each trajectory.</li>
-<li>TOFYS    : vector containing the time-of-flight values in years.</li>
-<li>minCOST  : scalar value of the minimum total cost among all solutions.</li>
-<li>row      : index of the trajectory corresponding to the minimum total cost.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>legn  : matrix containing trajectory leg parameters, where columns represent
@@ -7905,6 +7894,17 @@ considering both delta-v and time-of-flight. It also identifies the minimum delt
 <li>Select the trajectories that belong to the Pareto front.</li>
 <li>Identify and return the minimum delta-v trajectory.</li>
 </ol>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>legn     : matrix containing the trajectory legs that belong to the Pareto front.</li>
+<li>vvf      : matrix containing the final velocities of the Pareto-optimal trajectories.</li>
+<li>vinff    : matrix containing the incoming excess velocities of the Pareto-optimal trajectories.</li>
+<li>PF       : matrix representing the Pareto front, storing time-of-flight and total cost.</li>
+<li>COSTS    : vector containing the total cost (delta-v + weighted time-of-flight) for each trajectory.</li>
+<li>TOFYS    : vector containing the time-of-flight values in years.</li>
+<li>minCOST  : scalar value of the minimum total cost among all solutions.</li>
+<li>row      : index of the trajectory corresponding to the minimum total cost.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[legn, vvf, vinff, PF, COSTS, TOFYS, minCOST, row] = costFunction2_MODP_vdep_varr(legn, vvf, vinff, vdep, varr, sigma)
 </code></pre>

@@ -1217,10 +1217,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -1228,10 +1228,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7770,10 +7770,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OUTPUT
+        INPUT
       
     </span>
   </a>
@@ -7781,10 +7781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INPUT
+        OUTPUT
       
     </span>
   </a>
@@ -7823,11 +7823,6 @@
 
 
 <h1 id="wrapeci2synodic_se"><code>wrapECI2Synodic_SE</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>statesSYN : (Nx6) [rr, vv] state vectors in Sun-Earth Synodic frame
-taken at the same epochs (Lref, Vref)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>statesECI : (Nx6) [rr, vv] state vectors in eclipticJ2000 frame taken
@@ -7835,6 +7830,11 @@ at different epochs (km, km/s)</li>
 <li>epochs    : (Nx1) epochs at which the state vectors are computed
 (MJD2000)</li>
 <li>idcentral : ID of the central body. See constants.m</li>
+</ul>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>statesSYN : (Nx6) [rr, vv] state vectors in Sun-Earth Synodic frame
+taken at the same epochs (Lref, Vref)</li>
 </ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[statesSYN] = wrapECI2Synodic_SE(statesECI, epochs, idcentral, customEphemerides, pl)

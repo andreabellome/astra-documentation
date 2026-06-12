@@ -6681,17 +6681,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6707,6 +6696,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7779,17 +7779,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7805,6 +7794,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7843,17 +7843,6 @@
 
 
 <h1 id="constructresonantorbits_dp"><code>constructResonantOrbits_DP</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>legn    : Matrix containing the legs of the spacecraft's trajectory after constructing
-the resonant orbits. Empty if no valid orbit is found.</li>
-<li>vasn    : Matrix of spacecraft velocities after constructing resonant orbits.
-Empty if no valid orbit is found.</li>
-<li>vinfn   : Vector of spacecraft's hyperbolic excess velocities after constructing resonant orbits.
-Empty if no valid orbit is found.</li>
-<li>MAT_VV  : Matrix containing various parameters of the evaluated orbits, including
-incoming/outgoing velocities and inclination change.</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>legp    : Row vector containing the current leg information of the spacecraft's trajectory.</li>
@@ -7870,6 +7859,17 @@ trajectories that satisfy a specified resonance condition with a planet. It comp
 the spacecraft's incoming and outgoing velocities during a planetary flyby and
 determines if a resonant orbit can be achieved while minimizing the change in
 orbital inclination.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>legn    : Matrix containing the legs of the spacecraft's trajectory after constructing
+the resonant orbits. Empty if no valid orbit is found.</li>
+<li>vasn    : Matrix of spacecraft velocities after constructing resonant orbits.
+Empty if no valid orbit is found.</li>
+<li>vinfn   : Vector of spacecraft's hyperbolic excess velocities after constructing resonant orbits.
+Empty if no valid orbit is found.</li>
+<li>MAT_VV  : Matrix containing various parameters of the evaluated orbits, including
+incoming/outgoing velocities and inclination change.</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[legn, vasn, vinfn, MAT_VV] = constructResonantOrbits_DP(legp, vasp, vinfp, plt, res, tolINCL, idcentral, customEphemerides)
 </code></pre>

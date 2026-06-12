@@ -1718,17 +1718,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1744,6 +1733,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7781,17 +7781,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OUTPUT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7796,17 @@
     <span class="md-ellipsis">
       
         DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
       
     </span>
   </a>
@@ -7845,13 +7845,6 @@
 
 
 <h1 id="fgkepler_dt"><code>FGKepler_dt</code></h1>
-<h2 id="output">OUTPUT</h2>
-<ul>
-<li>rrf  : 1x3 vector of spacecraft position after the propagation [km]</li>
-<li>vvf  : 1x3 vector of spacecraft velocity after the propagation [km/s]</li>
-<li>kep2 : 1x6 vector of final keplerian elements after the propagation
-(see car2kep.m)</li>
-</ul>
 <h2 id="input">INPUT</h2>
 <ul>
 <li>kep1 : 1x6 vector with initial keplerian elements (see car2kep.m)</li>
@@ -7860,6 +7853,13 @@
 </ul>
 <h2 id="description">DESCRIPTION</h2>
 <p>Kepler propagation of an orbit. This works also for hyperbolic paths.</p>
+<h2 id="output">OUTPUT</h2>
+<ul>
+<li>rrf  : 1x3 vector of spacecraft position after the propagation [km]</li>
+<li>vvf  : 1x3 vector of spacecraft velocity after the propagation [km/s]</li>
+<li>kep2 : 1x6 vector of final keplerian elements after the propagation
+(see car2kep.m)</li>
+</ul>
 <h2 id="function-signature">Function Signature</h2>
 <pre><code class="language-matlab">[rrf, vvf, kep2] = FGKepler_dt(kep1, dt, mu)
 </code></pre>
