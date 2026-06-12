@@ -3,6 +3,8 @@
 ## DESCRIPTION
 This function divides the launch window in different years (365.25 days)
 and uses ASTRA with MODP successively for the different years.
+INPUT:
+seq      : vector with planets IDs in the MGA sequence
 
 ## INPUT
 - chosenRevs :
@@ -24,9 +26,6 @@ best DV trajectory, plot(2) is for plotting the Pareto
 front. Please put plot(i)=1 if you want to plot the results.
 - parallel   : if 1, then parallel computing is used
 - tstep      : (days) discretization time step
-
-## INPUT:
-seq      : vector with planets IDs in the MGA sequence
 
 ## Function Signature
 ```matlab

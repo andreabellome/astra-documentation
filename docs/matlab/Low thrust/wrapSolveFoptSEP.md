@@ -4,8 +4,7 @@
 This function solves the fuel-optimal low-thrust problem
 using Solar Electric Propulsion (SEP). The thrust profile can be seen in
 the function func_thrust_fitted.m
-
-## INPUT:
+INPUT:
 - param: structure with the required parameters from
 processDataAndWriteParam.m
 additional REQUIRED parameters are:
@@ -18,8 +17,7 @@ default 0.002)
 random guess is provided). It is STRONGLY RECOMMENDED to solve
 first a LT problem with max. thrust using wrapSolveFopt.m and
 then to use that solution as initial guess for the SEP problem.
-
-## OUTPUT:
+OUTPUT:
 - LTsol: structure with the following fields:
 - transfer : Matrix containing the processed trajectory data with the
 following columns:

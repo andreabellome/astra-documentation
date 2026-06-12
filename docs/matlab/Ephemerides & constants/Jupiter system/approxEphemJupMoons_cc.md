@@ -14,15 +14,15 @@ but not for mission design purposes.
 4 --> Callisto
 - t      : Time of interest in Modified Julian Date (MJD2000).
 
-## OUTPUT
-- rr     : Position vector of the moon at time t (in kilometers).
-- vv     : Velocity vector of the moon at time t (in kilometers per second).
-- kep    : Keplerian elements of the moon at time t.
-
 ## PROCESS
 - Defines reference epoch and initial Keplerian elements for each moon.
 - Computes the position and velocity vectors by propagating the initial
 Keplerian elements to the given time using the FGKepler_dt function.
+
+## OUTPUT
+- rr     : Position vector of the moon at time t (in kilometers).
+- vv     : Velocity vector of the moon at time t (in kilometers per second).
+- kep    : Keplerian elements of the moon at time t.
 
 ## Function Signature
 ```matlab

@@ -2,12 +2,10 @@
 
 ## DESCRIPTION
 This function solves the fuel-optimal low-thrust problem.
-
-## INPUT:
+INPUT:
 - param: structure with the required parameters from
 processDataAndWriteParam.m
-
-## OUTPUT:
+OUTPUT:
 - LTsol: structure with the following fields:
 - transfer : Matrix containing the processed trajectory data with the
 following columns:

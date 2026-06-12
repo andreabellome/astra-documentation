@@ -14,16 +14,6 @@ time, and delta-v components.
 - varr  : scalar value representing the specified arrival velocity.
 - sigma : weighting factor for the time-of-flight in the total cost computation.
 
-## OUTPUT
-- legn     : matrix containing the trajectory legs that belong to the Pareto front.
-- vvf      : matrix containing the final velocities of the Pareto-optimal trajectories.
-- vinff    : matrix containing the incoming excess velocities of the Pareto-optimal trajectories.
-- PF       : matrix representing the Pareto front, storing time-of-flight and total cost.
-- COSTS    : vector containing the total cost (delta-v + weighted time-of-flight) for each trajectory.
-- TOFYS    : vector containing the time-of-flight values in years.
-- minCOST  : scalar value of the minimum total cost among all solutions.
-- row      : index of the trajectory corresponding to the minimum total cost.
-
 ## PROCESS
 1. Compute the departure delta-v (dv1) and arrival delta-v (dv2), ensuring non-negative values.
 2. Compute the total time-of-flight (tofs).
@@ -33,6 +23,16 @@ time, and delta-v components.
 6. Compute the Pareto front from the cost matrix.
 7. Select the trajectories that belong to the Pareto front.
 8. Identify and return the minimum delta-v trajectory.
+
+## OUTPUT
+- legn     : matrix containing the trajectory legs that belong to the Pareto front.
+- vvf      : matrix containing the final velocities of the Pareto-optimal trajectories.
+- vinff    : matrix containing the incoming excess velocities of the Pareto-optimal trajectories.
+- PF       : matrix representing the Pareto front, storing time-of-flight and total cost.
+- COSTS    : vector containing the total cost (delta-v + weighted time-of-flight) for each trajectory.
+- TOFYS    : vector containing the time-of-flight values in years.
+- minCOST  : scalar value of the minimum total cost among all solutions.
+- row      : index of the trajectory corresponding to the minimum total cost.
 
 ## Function Signature
 ```matlab

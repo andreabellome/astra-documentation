@@ -13,11 +13,6 @@ time, and delta-v components.
 - vdep  : scalar value representing the initial departure velocity.
 - sigma : weighting factor for the time-of-flight in the total cost computation.
 
-## OUTPUT
-- legn  : subset of the input legn matrix corresponding to the Pareto-optimal solutions.
-- vvf   : subset of the input vvf matrix corresponding to the Pareto-optimal solutions.
-- vinff : subset of the input vinff matrix corresponding to the Pareto-optimal solutions.
-
 ## PROCESS
 1. Compute the departure delta-v (dv1), ensuring non-negative values.
 2. Compute the total time-of-flight (tofs) in years.
@@ -25,6 +20,11 @@ time, and delta-v components.
 4. Formulate the cost matrix using time-of-flight and total delta-v weighted by sigma.
 5. Compute the Pareto front using the `paretoFront_MODP` function.
 6. Extract and return only the Pareto-optimal solutions.
+
+## OUTPUT
+- legn  : subset of the input legn matrix corresponding to the Pareto-optimal solutions.
+- vvf   : subset of the input vvf matrix corresponding to the Pareto-optimal solutions.
+- vinff : subset of the input vinff matrix corresponding to the Pareto-optimal solutions.
 
 ## Function Signature
 ```matlab

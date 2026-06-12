@@ -14,9 +14,6 @@ It also plots the Sun's position for reference.
 - names  : cell with names of the planets. Default is empty. This is used
 only for putting legend to the plot.
 
-## OUTPUT
-- fig   : Handle to the figure created or used for plotting.
-
 ## PROCESS
 - If only three input arguments are provided, a new figure is opened.
 - If a fourth argument is provided, the function either uses the current
@@ -24,6 +21,9 @@ figure or opens a new one based on the `holdon` flag.
 - For each planet, compute and plot its orbit over the specified time range.
 - The orbits are plotted in Astronomical Units (AU) with the Sun's position
 marked as a yellow point.
+
+## OUTPUT
+- fig   : Handle to the figure created or used for plotting.
 
 ## Function Signature
 ```matlab

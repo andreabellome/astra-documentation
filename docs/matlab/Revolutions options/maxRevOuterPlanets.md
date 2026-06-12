@@ -12,6 +12,12 @@ are performed for these specific outer planets.
 cases (low-/high-energy) for each leg. Each column represents a leg of the sequence.
 - idcentral  : ID of the central body. See constants.m
 
+## PROCESS
+- Identify indices in the sequence where IDs are between 5 and 1192 (inclusive).
+- Determine the number of legs up to the identified index.
+- Update the chosenRevs matrix by setting the revolutions for these legs to 0.
+- Ensure that the updated matrix has unique rows in a stable order.
+
 ## OUTPUT
 - chosenRevs : Updated matrix where the revolutions for the outer planets (IDs 5 to 1192)
 are set to zero. Each column corresponds to a leg of the sequence of flyby bodies.
@@ -22,12 +28,6 @@ The coding is as follows:
 20 --> means 2 revolutions and case 0 (low energy) on the leg.
 21 --> means 2 revolutions and case 1 (high energy) on the leg.
 and so on...
-
-## PROCESS
-- Identify indices in the sequence where IDs are between 5 and 1192 (inclusive).
-- Determine the number of legs up to the identified index.
-- Update the chosenRevs matrix by setting the revolutions for these legs to 0.
-- Ensure that the updated matrix has unique rows in a stable order.
 
 ## Function Signature
 ```matlab

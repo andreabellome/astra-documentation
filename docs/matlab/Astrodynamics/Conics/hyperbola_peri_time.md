@@ -1,9 +1,5 @@
 # `hyperbola_peri_time`
 
-## DESCRIPTION:
-Time since periapsis (and time to periapsis) passage on a hyperbola given
-a true anomaly.
-
 ## INPUT
 - a  : semi-major axis (km), negative for hyperbola
 - e  : eccentricity (>1)

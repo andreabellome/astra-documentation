@@ -15,12 +15,6 @@ time, and delta-v components.
 - varr  : scalar value representing the specified arrival velocity.
 - sigma : weighting factor for the time-of-flight in the total cost computation.
 
-## OUTPUT
-- minCOST : minimum total cost among all trajectories.
-- row     : index of the trajectory with the minimum cost.
-- COSTS   : vector containing the total cost for each trajectory.
-- TOFYS   : vector containing the time-of-flight in years for each trajectory.
-
 ## PROCESS
 1. Compute the departure delta-v (dv1), ensuring non-negative values.
 2. Compute the arrival delta-v (dv2), ensuring non-negative values.
@@ -28,6 +22,12 @@ time, and delta-v components.
 4. Compute the total delta-v (dvtot) including all intermediate maneuvers.
 5. Compute the total cost as the sum of delta-v and weighted time-of-flight.
 6. Identify the trajectory with the minimum total cost.
+
+## OUTPUT
+- minCOST : minimum total cost among all trajectories.
+- row     : index of the trajectory with the minimum cost.
+- COSTS   : vector containing the total cost for each trajectory.
+- TOFYS   : vector containing the time-of-flight in years for each trajectory.
 
 ## Function Signature
 ```matlab

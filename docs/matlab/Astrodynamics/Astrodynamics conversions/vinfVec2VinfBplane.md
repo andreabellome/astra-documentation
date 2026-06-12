@@ -1,17 +1,5 @@
 # `vinfVec2VinfBplane`
 
-## DESCRIPTION:
-This function computes the v-infinity B-plane parameters and the
-periapsis radius from an incoming and outgoing infinity velocities
-vectors.
-The true anomaly is fixed at 0 rad, thus the parameters correspond to the
-pericentre of the flyby hyperbola.
-
-## INPUT:
-- vvinfIn   : 1x3 vector of incoming v-inf [km/s]
-- vvinfOu   : 1x3 vector of outgoing v-inf [km/s]
-- mu_planet : gravitational parameter of the flyby body [km3/s2]
-
 ## OUTPUT
 - vinf_bplane_params : 1x6 vector with the following parameters
 - vinf_mag        = vinf_bplane_params(1) magnitude

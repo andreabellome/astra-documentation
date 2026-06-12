@@ -1,3 +1,4 @@
+nav:
 - MATLAB API:
   - Astrodynamics:
     - Astrodynamics conversions:
@@ -115,6 +116,7 @@
     - planet_names_GA: matlab/Ephemerides & constants/planet_names_GA.md
     - wrap_generateEPH: matlab/Ephemerides & constants/wrap_generateEPH.md
   - Lambert problem and defects:
+    - computeDefects_DP: matlab/Lambert problem and defects/computeDefects_DP.md
     - findDV: matlab/Lambert problem and defects/findDV.md
     - lambertMR_MEXIFY: matlab/Lambert problem and defects/lambertMR_MEXIFY.md
     - maxRev_LP: matlab/Lambert problem and defects/maxRev_LP.md
@@ -151,17 +153,23 @@
   - Plot and save:
     - generateOutputSequenceTXT: matlab/Plot and save/generateOutputSequenceTXT.md
     - generateOutputTXT: matlab/Plot and save/generateOutputTXT.md
+    - plotFontSizeAxesDim: matlab/Plot and save/plotFontSizeAxesDim.md
     - plotOutputByLauchDate: matlab/Plot and save/plotOutputByLauchDate.md
     - plotPLTS_tt: matlab/Plot and save/plotPLTS_tt.md
     - plotPareto: matlab/Plot and save/plotPareto.md
     - plotPath: matlab/Plot and save/plotPath.md
     - saveOUTPUT_MODP: matlab/Plot and save/saveOUTPUT_MODP.md
     - saveOUTPUT_SODP: matlab/Plot and save/saveOUTPUT_SODP.md
+    - save_fig_custom: matlab/Plot and save/save_fig_custom.md
+    - setInterpreterDefault: matlab/Plot and save/setInterpreterDefault.md
+    - write_mga_param: matlab/Plot and save/write_mga_param.md
   - Processing:
+    - check_INPUT: matlab/Processing/check_INPUT.md
     - fromSeq2Legs: matlab/Processing/fromSeq2Legs.md
     - generateDiffRuns: matlab/Processing/generateDiffRuns.md
     - numberOfDefects: matlab/Processing/numberOfDefects.md
     - path2Vinfs: matlab/Processing/path2Vinfs.md
+    - pathfromPF: matlab/Processing/pathfromPF.md
     - planetIdToName: matlab/Processing/planetIdToName.md
     - postProcessOutputASTRA: matlab/Processing/postProcessOutputASTRA.md
     - process_paretoFront_structure: matlab/Processing/process_paretoFront_structure.md
@@ -181,6 +189,7 @@
     - constructResonantOrbits_DP: matlab/Resonances/constructResonantOrbits_DP.md
     - wrapConstructionResonance_DP: matlab/Resonances/wrapConstructionResonance_DP.md
   - Revolutions options:
+    - differentRuns_v2: matlab/Revolutions options/differentRuns_v2.md
     - maxRevOuterPlanets: matlab/Revolutions options/maxRevOuterPlanets.md
     - permn: matlab/Revolutions options/permn.md
     - processResonances: matlab/Revolutions options/processResonances.md
@@ -201,8 +210,10 @@
     - minMaxDVS: matlab/astra_optimization/minMaxDVS.md
     - minMaxEps: matlab/astra_optimization/minMaxEps.md
     - minMaxFirstMan: matlab/astra_optimization/minMaxFirstMan.md
+    - minMaxFromPath: matlab/astra_optimization/minMaxFromPath.md
     - optPSO: matlab/astra_optimization/optPSO.md
     - path2FlybyParam: matlab/astra_optimization/path2FlybyParam.md
+    - postProcessPathASTRA_dsm_lowThrust: matlab/astra_optimization/postProcessPathASTRA_dsm_lowThrust.md
     - revs2NmanLeg: matlab/astra_optimization/revs2NmanLeg.md
     - swingby_vA: matlab/astra_optimization/swingby_vA.md
     - tnh2car: matlab/astra_optimization/tnh2car.md

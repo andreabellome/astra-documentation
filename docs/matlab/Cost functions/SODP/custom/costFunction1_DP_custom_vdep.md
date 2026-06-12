@@ -15,11 +15,6 @@ time, and delta-v components.
 - vdep  : scalar value representing the specified departure velocity.
 - sigma : weighting factor for the time-of-flight in the total cost computation.
 
-## OUTPUT
-- legn  : row vector corresponding to the optimal trajectory leg.
-- vvf   : row vector corresponding to the final velocity of the optimal trajectory.
-- vinff : row vector corresponding to the incoming excess velocity of the optimal trajectory.
-
 ## PROCESS
 1. Compute the departure delta-v (dv1), ensuring non-negative values.
 2. Compute the total time-of-flight (tofs).
@@ -28,6 +23,11 @@ time, and delta-v components.
 5. Compute the total cost as the sum of delta-v and weighted time-of-flight.
 6. Identify the trajectory with the minimum total cost.
 7. Return the corresponding trajectory leg, final velocity, and incoming excess velocity.
+
+## OUTPUT
+- legn  : row vector corresponding to the optimal trajectory leg.
+- vvf   : row vector corresponding to the final velocity of the optimal trajectory.
+- vinff : row vector corresponding to the incoming excess velocity of the optimal trajectory.
 
 ## Function Signature
 ```matlab

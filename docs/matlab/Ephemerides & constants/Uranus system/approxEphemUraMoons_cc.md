@@ -1,10 +1,6 @@
 # `approxEphemUraMoons_cc`
 
-## INPUTS
-- idmoon: number indicating which Uranus moon to consider.
-- t: Epoch at which moon state vector & Orbital Elements are to be
-computed, expressed in days past since MJD2000.
-OUTPUTS %%
+## OUTPUTS
 - rr: Moon position vector components  at the desired epoch in [km].
 - vv: Moon velocity vector components at the desired epoch in [km/s].
 - kep: 1x6 vector of orbital elements ordered as [a, e, i, Om, om, th],
@@ -13,6 +9,11 @@ CHANGELOG %%
 27/08/2024, J.C Garcia Mateas: corrected the Orbital Elements for the
 reference epoch & added function description & comments.
 FUNCTIONS %%
+
+## INPUTS
+- idmoon: number indicating which Uranus moon to consider.
+- t: Epoch at which moon state vector & Orbital Elements are to be
+computed, expressed in days past since MJD2000.
 
 ## Function Signature
 ```matlab
